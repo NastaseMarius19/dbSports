@@ -1,4 +1,4 @@
-version: '3.5'
+version: '0.1'
 
 services:
   postgres:
@@ -9,7 +9,10 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-root}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-root}
       PGDATA: /data/postgres
+      TZ: Europe/Bucharest
+      PGTZ: Europe/Bucharest
     volumes:
+       - $HOME/Desktop
        - postgres:/data/postgres
     ports:
       - "5432:5432"
