@@ -1,0 +1,262 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  align-items: center;
+  text-align: center;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Alegreya Sans';;
+}
+
+.Auth-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.Auth-form {
+  width: 420px;
+  box-shadow: rgb(0 0 0 / 16%) 1px 1px 10px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.Auth-form-content {
+  position: relative;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.Auth-form-title {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 24px;
+  color: rgb(34, 34, 34);
+  font-weight: 800;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(34, 34, 34);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.dblogo {
+  height: 152px;
+  object-fit: cover;
+  width: 152px;
+
+}
+
+.dbsports {
+  display: flex;
+  align-self: flex-end;
+  padding: 1%;
+  flex-direction: row-reverse;
+}
+
+.formInput {
+  background: #ffffff;
+  border: 2px solid #5470ff;
+  border-radius: 8px;
+  
+  width: 160px;
+  height: 48px;
+}
+
+.form-group1 {
+  padding: 30px 50px;
+}
+
+.nameInput {
+  color: #52525c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.passwordInput {
+  color: #52525c;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.btn {
+  box-sizing: border-box;
+  background: #0018a8;
+  color: #ffffff;
+  border: 1px solid #000000;
+  
+  font-style: normal;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {background-color: #0019a8cb}
+
+.btn:active {
+  background-color: #0019a8cb;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  
+}
+.loginButton {
+ 
+  box-sizing: border-box;
+  padding: 30px 50px;
+}
+.btn-login {
+  box-sizing: border-box;
+  padding: 10%;
+  width: 181px;
+}
+
+.btn-register {
+  box-sizing: border-box;
+  padding: 10%;
+  width: 181px;
+  
+}
+
+
