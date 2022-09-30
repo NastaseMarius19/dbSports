@@ -1,5 +1,4 @@
 import Form from "../components/Forms/Form";
-import Logo from "../components//logos/Logo";
 import DbSports from "../components/logos/DbSports";
 
 function Login() {
