@@ -7,13 +7,20 @@ const NavbarMainPage = () => {
   return (
     <nav>
       <div className="dbsportsNav">
+        <div class="container">
+          {/* <form action="/" method="GET" class="form"> 
+          Return to make searchbar functional!!!*/}
+          <input type="search" placeholder="Search" class="search-field" />
+          <button type="submit" class="search-button">
+            <img
+              src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
+              alt="mglass"
+            />
+          </button>
+          {/* </form> */}
+        </div>
         <div>
           <PostButton />
-        </div>
-        <div className="searchbar2">
-          <img src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png" 
-          className="search-img"/>
-          <input placeholder="Search for anything" className="searchbar" />
         </div>
         <div>
           <UsernameButton />
