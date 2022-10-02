@@ -1,4 +1,3 @@
-import Logo from "../components/logos/Logo";
 import RegisterForm from "../components/Forms/RegisterForm";
 import DbSports from "../components/logos/DbSports";
 function Register() {
