@@ -19,11 +19,13 @@ const NavbarMainPage = () => {
           </button>
           {/* </form> */}
         </div>
+        <div className="main-page-buttons">
         <div>
           <PostButton />
         </div>
         <div>
           <UsernameButton />
+        </div>
         </div>
         <div className="logo">
           <Logo />

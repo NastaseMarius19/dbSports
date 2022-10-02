@@ -3,7 +3,9 @@ import TextField from '../components/postpagecomponents/TextField'
 function PostContentPage  ()  {
   return (
     <div>
-        <TextField />
+      <p>Hello world!</p>
+        {/* <TextField /> */}
+        
     </div>
   )
 }
