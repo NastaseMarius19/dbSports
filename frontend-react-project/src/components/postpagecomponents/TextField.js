@@ -1,5 +1,6 @@
+import * as React from 'react'
 import { Textarea } from '@chakra-ui/react'
-
+import { Text } from '@chakra-ui/react'
 function TextField() {
     let [value, setValue] = React.useState('')
   
@@ -9,7 +10,7 @@ function TextField() {
     }
     return (
       <>
-        <Text mb='8px'>Value: {value}</Text>
+        <Text mb='8px' className='posttitle'>Title: {value}</Text>
         <Textarea
           value={value}
           onChange={handleInputChange}

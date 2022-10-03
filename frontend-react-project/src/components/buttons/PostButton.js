@@ -5,7 +5,7 @@ const PostButton = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => navigate("/PostContentPage")} 
+      <button onClick={() => navigate("/postcontentpage")} 
       className="btn btn-post">Post</button>
     </div>
   );

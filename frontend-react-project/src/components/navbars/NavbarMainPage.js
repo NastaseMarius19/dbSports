@@ -2,6 +2,7 @@ import React from "react";
 import PostButton from "../buttons/PostButton";
 import UsernameButton from "../buttons/UsernameButton";
 import Logo from "../logos/Logo";
+import GoToTournamentsButton from "../buttons/GoToTournamentsButton";
 
 const NavbarMainPage = () => {
   return (
@@ -25,6 +26,9 @@ const NavbarMainPage = () => {
         </div>
         <div>
           <UsernameButton />
+        </div>
+        <div>
+          <GoToTournamentsButton />
         </div>
         </div>
         <div className="logo">
