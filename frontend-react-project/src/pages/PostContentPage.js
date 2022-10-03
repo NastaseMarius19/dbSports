@@ -5,10 +5,10 @@ function PostContentPage  ()  {
   return (
     <div>
       <div>
-        <TextField />
+        <DbSports />
       </div>
       <div>
-        <DbSports />
+        <TextField />
       </div>
     </div>
     

@@ -10,7 +10,7 @@ const ReturnToMainPageButton = () => {
         onClick={() => navigate("/mainpage")}
         className="btn btn-register"
       >
-        Register
+        Return to main page
       </button>
     </div>
   );
