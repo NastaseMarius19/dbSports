@@ -1,6 +1,7 @@
 import React from "react";
 import RegisterButton from "../buttons/RegisterButton";
 import LoginButton from "../buttons/LoginButton";
+import Password from "antd/lib/input/Password";
 
 const Form = () => {
   return (
@@ -20,7 +21,7 @@ const Form = () => {
             <div className="form-group1">
               <label className="passwordInput">Password:</label>
               <input
-                type="pas"
+                type="password"
                 placeholder="Enter password"
                 className="formInput"
               />

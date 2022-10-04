@@ -20,7 +20,7 @@ const RegisterForm = () => {
             <div className="form-group1">
               <label className="passwordInput">Password:</label>
               <input
-                type="pas"
+                type="password"
                 placeholder="Enter password"
                 className="formInput"
               />
@@ -28,7 +28,7 @@ const RegisterForm = () => {
             <div className="form-group1">
               <label className="passwordInput">Repeat Password:</label>
               <input
-                type="pas"
+                type="password"
                 placeholder="Repeat password"
                 className="formInput"
               />

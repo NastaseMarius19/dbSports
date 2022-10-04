@@ -9,12 +9,12 @@ function MainPage() {
         <NavbarMainPage />
       </div>
       <div className="main-comp">
-        <div className="main-list">
+        {/* <div className="main-list"> */}
           <Sportlist />
-        </div>
-        <div className="main-subscriptions">
+        {/* </div> */}
+        {/* <div className="main-subscriptions"> */}
           <Subscriptions />
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

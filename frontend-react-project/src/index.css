@@ -418,10 +418,11 @@ div.modal {
 
 .main-comp {
   display: grid;
-  grid-template-columns: 88% 10%;
+  grid-template-columns: 86% 11%;
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
 }
+
 
 .subs {
   border-radius: 40px;
@@ -513,3 +514,10 @@ div.modal {
  padding-bottom: 100px;
 
 }
+
+.buttonpostpage {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
