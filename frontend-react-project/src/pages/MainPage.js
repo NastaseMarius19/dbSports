@@ -3,6 +3,8 @@ import Sportlist from "../components/sportlist/Sportlist";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 
 function MainPage() {
+
+
   return (
     <div>
       <div className="main-nav">
@@ -10,10 +12,10 @@ function MainPage() {
       </div>
       <div className="main-comp">
         {/* <div className="main-list"> */}
-          <Sportlist />
+        <Sportlist />
         {/* </div> */}
         {/* <div className="main-subscriptions"> */}
-          <Subscriptions />
+        <Subscriptions />
         {/* </div> */}
       </div>
     </div>

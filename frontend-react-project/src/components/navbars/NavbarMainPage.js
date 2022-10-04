@@ -4,7 +4,10 @@ import UsernameButton from "../buttons/UsernameButton";
 import DbSports from "../logos/DbSports";
 import SwitchPageButton from "../buttons/SwitchPageButton";
 // import LogoButton from "../buttons/LogoButton";
+
+
 const NavbarMainPage = () => {
+
   return (
     <nav>
       <div className="dbsportsNav">
