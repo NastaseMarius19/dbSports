@@ -2,14 +2,13 @@ package com.dbsummerschool.dbsports.service;
 
 import com.dbsummerschool.dbsports.exception.AlreadyExistException;
 import com.dbsummerschool.dbsports.exception.InvalidEmailFormatException;
-import com.dbsummerschool.dbsports.model.Sport;
 import com.dbsummerschool.dbsports.model.User;
 import com.dbsummerschool.dbsports.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
 import java.util.regex.Pattern;
 
 @Service
@@ -22,7 +21,7 @@ public class UserService {
     }
 
 
-    public User registerNewUser(User user) throws InvalidEmailFormatException, AlreadyExistException {
+    public User registerNewUser(User user) throws AlreadyExistException, InvalidEmailFormatException {
         if(userRepository.findAllByEmail(user.getEmail()).size() == 0) {
             String email = user.getEmail();
             if(!verifyEmailFormat(email))
@@ -42,5 +41,9 @@ public class UserService {
         return Pattern.compile("^(.+)@(\\S+)$")
                 .matcher(email)
                 .matches();
+    }
+
+    public List<User> getUsersByEmail(String email) {
+        return userRepository.findAllByEmail(email);
     }
 }

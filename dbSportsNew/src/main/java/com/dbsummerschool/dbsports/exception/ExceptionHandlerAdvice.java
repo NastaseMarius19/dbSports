@@ -20,4 +20,14 @@ public class ExceptionHandlerAdvice extends ResponseEntityExceptionHandler {
     public ResponseEntity alreadyExistException() {
         return new ResponseEntity("Already exist!", HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(InvalidEmailException.class)
+    public ResponseEntity invalidEmailException() {
+        return new ResponseEntity("Invalid email!",HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public ResponseEntity invalidCredentialsException() {
+        return new ResponseEntity("Password incorect!",HttpStatus.UNAUTHORIZED);
+    }
 }
