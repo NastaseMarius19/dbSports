@@ -11,9 +11,11 @@ function ModalSignout(props) {
         <p>Are you sure you want to sign out?</p>
       </div>
       <div className="modalButtons">
-        <button className="btn btn-alt" onClick={cancelHandler}>
+        <div>
+        <button className="btn btn-post" onClick={cancelHandler}>
           Cancel
         </button>
+        </div>
         <SignoutButton />
       </div>
     </div>

@@ -4,7 +4,7 @@ const SignoutButton = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => navigate("/")} className="btn btn-alt">
+      <button onClick={() => navigate("/")} className="btn btn-post">
         Sign out
       </button>
     </div>

@@ -288,7 +288,6 @@ label {
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
-  margin: 12px 0 0;
   outline: none;
   overflow: hidden;
   padding: 0 25px;
@@ -436,7 +435,6 @@ div.modal {
 } */
 .container {
   width: 50%;
-  background-color: white;
 }
 
 .search-field {
@@ -463,7 +461,6 @@ div.modal {
   display: flex;
   width: 400px;
   justify-content: space-around;
-  background-color: white;
 }
 
 
