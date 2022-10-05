@@ -8,22 +8,28 @@ import Grid from "@mui/material/Grid";
 import { CardHeader } from "@mui/material";
 import data from "./PostFeed.json";
 
-const card = (
-  <React.Fragment>
-  </React.Fragment>
-);
 
 const Sportlist = (props) => {
+
+  const filteredData = data.filter((el) => {
+    //if no input the return the original
+    if (props.input === '') {
+      return el;
+    }
+    //return the item which contains the user input
+    else {
+      return el.text.toLowerCase().includes(props.input)
+    }
+  })
 
   return (
     <Box sx={{ m: 5 }}>
       <Grid container spacing={3}>
 
-        {data.map((item) => (
+        {filteredData.map((item) => (
           <Grid item xs={10}>
             <div className="feed">
               <Card variant="outlined">
-                {card}
                 <CardHeader title={item.title} ></CardHeader>
                 <CardMedia
                   component="img"

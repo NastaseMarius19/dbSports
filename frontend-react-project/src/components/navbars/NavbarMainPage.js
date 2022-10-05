@@ -15,7 +15,7 @@ const NavbarMainPage = () => {
           <div class="container">
             {/* <form action="/" method="GET" class="form"> 
           Return to make searchbar functional!!!*/}
-            <input type="search" placeholder="Search" class="search-field" />
+
             <button type="submit" class="search-button">
               <img
                 src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
