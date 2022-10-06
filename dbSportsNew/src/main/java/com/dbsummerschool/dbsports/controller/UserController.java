@@ -9,9 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.argon2.Argon2PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+import javax.mail.MessagingException;
+import java.io.UnsupportedEncodingException;
+
+@Controller
 public class UserController {
     UserService userService;
     SportService sportService;
@@ -24,7 +28,7 @@ public class UserController {
         exceptionHandlerAdvice = new ExceptionHandlerAdvice();
     }
 
-    @PostMapping("/register")
+    @PostMapping("/users")
     public ResponseEntity register(@RequestBody User user){
         try {
             userService.registerNewUser(user);
@@ -33,11 +37,24 @@ public class UserController {
             return exceptionHandlerAdvice.alreadyExistException();
         } catch (InvalidEmailFormatException e) {
             return exceptionHandlerAdvice.invalidEmailFormatException();
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
         return ResponseEntity.status(HttpStatus.CREATED).body("Account created!");
     }
 
-    @GetMapping("/login")
+    @GetMapping("/verify/{code}")
+    public ResponseEntity verifyUser(@PathVariable("code") String code) {
+        if (userService.verify(code)) {
+            return ResponseEntity.status(HttpStatus.CREATED).body("Verify your email!");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid registration code!");
+        }
+    }
+
+    @GetMapping("/users")
     public ResponseEntity login(@RequestBody UserDTO userDTO) {
         String email = userDTO.getEmail();
         if(userService.getUsersByEmail(email).size() != 0) {
