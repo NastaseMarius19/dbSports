@@ -17,4 +17,8 @@ public class SportService {
     public Sport getFirst() {
         return sportRepository.findAll().get(0);
     }
+
+    public Sport getSportByName(String name) {
+        return sportRepository.findSportByName(name);
+    }
 }

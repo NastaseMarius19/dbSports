@@ -35,13 +35,16 @@ public class User {
     @ManyToMany
     private Set<Sport> sportList;
 
-    public User(int user_id, String name, String surname, String password, String email, Set<Sport> sportList) {
-        this.user_id = user_id;
+    @Column(name = "verification_code", length = 64)
+    private String verificationCode;
+
+    private boolean enabled;
+
+    public User(String name, String surname, String password, String email) {
         this.name = name;
         this.surname = surname;
         this.password = password;
         this.email = email;
-        this.sportList = sportList;
     }
 
     @Override
