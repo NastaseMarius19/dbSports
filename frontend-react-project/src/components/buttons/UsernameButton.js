@@ -15,7 +15,9 @@ function UsernameButton(props) {
   return (
     <div>
       <div>
-        <button className="btn btn-post" onClick={signoutHandler}>
+        <button 
+        className="btn btn-post" 
+        onClick={signoutHandler}>
           User
         </button>
       </div>
