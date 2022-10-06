@@ -16,6 +16,7 @@ import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;
 
 @Controller
+@RequestMapping("/users")
 public class UserController {
     UserService userService;
     SportService sportService;
@@ -28,7 +29,7 @@ public class UserController {
         exceptionHandlerAdvice = new ExceptionHandlerAdvice();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user){
         try {
             userService.registerNewUser(user);
@@ -54,7 +55,7 @@ public class UserController {
         }
     }
 
-    @GetMapping("/users")
+    @GetMapping("/login")
     public ResponseEntity login(@RequestBody UserDTO userDTO) {
         String email = userDTO.getEmail();
         if(userService.getUsersByEmail(email).size() != 0) {
