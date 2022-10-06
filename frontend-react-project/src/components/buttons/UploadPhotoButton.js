@@ -7,9 +7,9 @@ const UploadPhotoButton = () => {
     <div>
       {selectedImage && (
         <div>
-        <img alt="not fount" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
         <br />
-        <button onClick={()=>setSelectedImage(null)}>Remove</button>
+        <button className="btn btn-post" onClick={()=>setSelectedImage(null)}>Remove</button>
         </div>
       )}
       <br />

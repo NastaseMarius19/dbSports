@@ -10,6 +10,22 @@ const RegisterForm = () => {
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign Up</h3>
             <div className="form-group1">
+              <label className="nameInput">First Name:</label>
+              <input
+                type="text"
+                placeholder="Enter First Name"
+                className="formInput"
+              />
+            </div>
+            <div className="form-group1">
+              <label className="nameInput">Last Name:</label>
+              <input
+                type="text"
+                placeholder="Enter your Last Name"
+                className="formInput"
+              />
+            </div>
+            <div className="form-group1">
               <label className="nameInput">Email address:</label>
               <input
                 type="email"
