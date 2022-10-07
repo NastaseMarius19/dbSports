@@ -30,4 +30,9 @@ public class ExceptionHandlerAdvice extends ResponseEntityExceptionHandler {
     public ResponseEntity invalidCredentialsException() {
         return new ResponseEntity("Password incorect!",HttpStatus.UNAUTHORIZED);
     }
+
+    @ExceptionHandler(InvalidEmailConfirmationException.class)
+    public ResponseEntity invalidEmailConfirmationException() {
+        return new ResponseEntity("The email has not been confirmed!!",HttpStatus.UNAUTHORIZED);
+    }
 }
