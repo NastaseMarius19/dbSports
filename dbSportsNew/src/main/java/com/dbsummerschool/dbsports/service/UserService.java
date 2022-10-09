@@ -98,6 +98,4 @@ public class UserService {
     public void updateSportList(User user){
         userRepository.save(user);
     }
-
-
 }

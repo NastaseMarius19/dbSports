@@ -28,6 +28,16 @@ public class Announcement {
     @ManyToOne
     private Sport sport;
 
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private String description;
+
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
+    private byte[] picture;
+
     public Announcement(int announcement_id, String postingUser, Date timeOfPost, Sport sport) {
         this.announcement_id = announcement_id;
         this.postingUser = postingUser;

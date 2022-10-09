@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 @Controller
 @RequestMapping("/users")
@@ -56,7 +55,7 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public ResponseEntity login(@RequestBody UserDTO userDTO) {
+    public ResponseEntity login(@RequestBody LoginDTO userDTO) {
         String email = userDTO.getEmail();
         if(userService.getUsersByEmail(email).size() != 0) {
             User user = userService.getUsersByEmail(email).get(0);
