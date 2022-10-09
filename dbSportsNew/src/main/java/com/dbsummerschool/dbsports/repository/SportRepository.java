@@ -4,7 +4,9 @@ import com.dbsummerschool.dbsports.model.Sport;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface SportRepository extends JpaRepository<Sport, Integer> {
-    Sport findSportByName(String name);
+    List<Sport> findSportByName(String name);
 }

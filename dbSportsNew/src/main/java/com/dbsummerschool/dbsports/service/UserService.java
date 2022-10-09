@@ -94,4 +94,6 @@ public class UserService {
     public List<User> getUsersByEmail(String email) {
         return userRepository.findAllByEmail(email);
     }
+
+
 }
