@@ -1,10 +1,7 @@
 package com.dbsummerschool.dbsports.controller;
 
 import com.dbsummerschool.dbsports.exception.*;
-import com.dbsummerschool.dbsports.model.Sport;
-import com.dbsummerschool.dbsports.model.SportDTO;
-import com.dbsummerschool.dbsports.model.User;
-import com.dbsummerschool.dbsports.model.UserDTO;
+import com.dbsummerschool.dbsports.model.*;
 import com.dbsummerschool.dbsports.service.SportService;
 import com.dbsummerschool.dbsports.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.mail.MessagingException;
 import java.io.UnsupportedEncodingException;
+import java.util.List;
 
 @Controller
 @RequestMapping("/users")
