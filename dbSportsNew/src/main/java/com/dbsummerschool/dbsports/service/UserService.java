@@ -95,5 +95,9 @@ public class UserService {
         return userRepository.findAllByEmail(email);
     }
 
+    public void updateSportList(User user){
+        userRepository.save(user);
+    }
+
 
 }
