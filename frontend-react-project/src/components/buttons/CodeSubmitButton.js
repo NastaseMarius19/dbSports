@@ -1,7 +1,7 @@
-function CodeSubmitButton() {
+function CodeSubmitButton(props) {
   return (
     <div>
-      <button className="btn btn-post">Submit</button>
+      <button className="btn btn-post" onClick={props.onClick}>Submit</button>
     </div>
   );
 }

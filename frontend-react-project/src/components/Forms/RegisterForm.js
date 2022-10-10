@@ -34,6 +34,7 @@ const RegisterForm = () => {
     catch(err){
       alert("Registration failed");
     }
+    
   }
 
   return (

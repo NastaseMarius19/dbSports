@@ -4,6 +4,7 @@ import LoginButton from "../buttons/LoginButton";
 import Password from "antd/lib/input/Password";
 
 const Form = () => {
+  
   return (
     <div className="form">
       <div className="Auth-form-container">
@@ -28,7 +29,7 @@ const Form = () => {
             </div>
             <div className="buttons">
               <div className="loginButton">
-                <LoginButton />
+                <LoginButton/>
               </div>
               <p>Don't have an account? Register here!</p>
               <div className="loginButton">
