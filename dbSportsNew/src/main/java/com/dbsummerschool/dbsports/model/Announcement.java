@@ -38,11 +38,13 @@ public class Announcement {
     @Basic(fetch = FetchType.LAZY)
     private byte[] picture;
 
-    public Announcement(int announcement_id, String postingUser, Date timeOfPost, Sport sport) {
-        this.announcement_id = announcement_id;
+    public Announcement(String postingUser, Date timeOfPost, Sport sport, String title, String description, byte[] picture) {
         this.postingUser = postingUser;
         this.timeOfPost = timeOfPost;
         this.sport = sport;
+        this.title = title;
+        this.description = description;
+        this.picture = picture;
     }
 
     @Override

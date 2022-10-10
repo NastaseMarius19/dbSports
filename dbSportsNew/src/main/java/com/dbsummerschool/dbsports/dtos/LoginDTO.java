@@ -1,4 +1,4 @@
-package com.dbsummerschool.dbsports.model;
+package com.dbsummerschool.dbsports.dtos;
 
 public class LoginDTO {
     private String email;

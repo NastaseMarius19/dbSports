@@ -1,5 +1,7 @@
 package com.dbsummerschool.dbsports.controller;
 
+import com.dbsummerschool.dbsports.dtos.LoginDTO;
+import com.dbsummerschool.dbsports.dtos.SportDTO;
 import com.dbsummerschool.dbsports.exception.*;
 import com.dbsummerschool.dbsports.model.*;
 import com.dbsummerschool.dbsports.service.SportService;

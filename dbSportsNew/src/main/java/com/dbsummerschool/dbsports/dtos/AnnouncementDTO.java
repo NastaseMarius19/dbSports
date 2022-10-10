@@ -1,6 +1,4 @@
-package com.dbsummerschool.dbsports.model;
-
-import java.io.File;
+package com.dbsummerschool.dbsports.dtos;
 
 public class AnnouncementDTO {
     public String title;

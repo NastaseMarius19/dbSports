@@ -50,6 +50,5 @@ public class TournamentController {
         for(int i = 0; i < sportList.size(); i++)
             tournamentList.addAll(getAllBySport(sportList.get(i).getName()));
         return tournamentList;
-
     }
 }
