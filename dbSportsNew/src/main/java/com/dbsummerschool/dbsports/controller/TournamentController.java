@@ -48,7 +48,7 @@ public class TournamentController {
         List<Sport> sportList = new ArrayList<Sport>(sportSet);
         List<Tournament> tournamentList = new ArrayList<>();
         for(int i = 0; i < sportList.size(); i++)
-            tournamentList.addAll(getAllBySport(sportList.get(i).getName()));
+            tournamentList.addAll(tournamentService.getAllBySport(sportList.get(i)));
         return tournamentList;
     }
 }
