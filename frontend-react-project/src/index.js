@@ -9,17 +9,18 @@ import MainPage from './pages/MainPage'
 import PostContentPage from './pages/PostContentPage';
 import TournamentsPage from './pages/TournamentsPage';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-        <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="mainpage" element={<MainPage />} />
-        <Route path="postcontentpage" element={<PostContentPage />} />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="mainpage" element={<MainPage />} />
+          <Route path="postcontentpage" element={<PostContentPage />} />
         <Route path="tournaments" element={<TournamentsPage />} />
-      </Routes>
+        </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

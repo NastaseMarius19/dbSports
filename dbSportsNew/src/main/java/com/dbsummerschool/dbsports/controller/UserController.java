@@ -17,6 +17,7 @@ import java.io.UnsupportedEncodingException;
 
 @Controller
 @RequestMapping("/users")
+@CrossOrigin(origins="*")
 public class UserController {
     UserService userService;
     SportService sportService;
@@ -31,6 +32,7 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity register(@RequestBody User user){
+        System.out.println(user);
         try {
             userService.registerNewUser(user);
         } catch (AlreadyExistException e) {
@@ -43,11 +45,13 @@ public class UserController {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
+
         return ResponseEntity.status(HttpStatus.CREATED).body("Account created!");
     }
 
     @GetMapping("/verify/{code}")
     public ResponseEntity verifyUser(@PathVariable("code") String code) {
+        System.out.println(code);
         if (userService.verify(code)) {
             return ResponseEntity.status(HttpStatus.CREATED).body("Verify your email!");
         } else {

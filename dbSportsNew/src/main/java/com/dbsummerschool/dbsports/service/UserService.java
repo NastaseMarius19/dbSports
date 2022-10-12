@@ -52,9 +52,11 @@ public class UserService {
 
     public boolean verify(String verificationCode) {
         User userVerification  = userRepository.findByVerificationCode(verificationCode);
+        System.out.println(userVerification);
         if(userVerification == null || userVerification.isEnabled()) {
             return false;
         } else {
+            System.out.println("da");
             userVerification.setVerificationCode(null);
             userVerification.setEnabled(true);
             userRepository.save(userVerification);
