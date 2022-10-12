@@ -1,6 +1,6 @@
 package com.dbsummerschool.dbsports.model;
 
-public class UserDTO {
+public class LoginDTO {
     private String email;
     private String password;
 
