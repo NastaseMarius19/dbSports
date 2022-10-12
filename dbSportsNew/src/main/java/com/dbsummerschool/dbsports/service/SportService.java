@@ -5,6 +5,8 @@ import com.dbsummerschool.dbsports.repository.SportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class SportService {
     SportRepository sportRepository;
@@ -18,7 +20,9 @@ public class SportService {
         return sportRepository.findAll().get(0);
     }
 
-    public Sport getSportByName(String name) {
+    public List<Sport> getSportsByName(String name) {
         return sportRepository.findSportByName(name);
     }
+
+
 }

@@ -1,9 +1,11 @@
 package com.dbsummerschool.dbsports.controller;
 
+import com.dbsummerschool.dbsports.dtos.LoginDTO;
+import com.dbsummerschool.dbsports.dtos.SportDTO;
+import com.dbsummerschool.dbsports.dtos.UserDTO;
 import com.dbsummerschool.dbsports.exception.*;
+import com.dbsummerschool.dbsports.model.*;
 import com.dbsummerschool.dbsports.model.User;
-import com.dbsummerschool.dbsports.model.LoginDTO;
-import com.dbsummerschool.dbsports.model.UserDTO;
 import com.dbsummerschool.dbsports.service.SportService;
 import com.dbsummerschool.dbsports.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,4 +80,17 @@ public class UserController {
         }
         return exceptionHandlerAdvice.invalidEmailException();
     }
+
+    @PostMapping("/add-sport")
+    public ResponseEntity addSport(@RequestBody SportDTO sportDTO) {
+        String email=sportDTO.getEmail();
+        String nameSport=sportDTO.getName();
+        User user = userService.getUsersByEmail(email).get(0);
+        Sport sport= sportService.getSportsByName(nameSport).get(0);
+        user.getSportList().add(sport);
+        userService.updateSportList(user);
+        return ResponseEntity.status(HttpStatus.OK).body("Sport added successfully!");
+    }
+
+
 }

@@ -94,4 +94,8 @@ public class UserService {
     public List<User> getUsersByEmail(String email) {
         return userRepository.findAllByEmail(email);
     }
+
+    public void updateSportList(User user){
+        userRepository.save(user);
+    }
 }
