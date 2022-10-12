@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import RegisterButton from "../buttons/RegisterButton";
 import LoginButton from "../buttons/LoginButton";
-import Password from "antd/lib/input/Password";
+import axios
+ from "axios";
+
+
 
 const Form = () => {
+  
+
   return (
     <div className="form">
       <div className="Auth-form-container">
-        <form className="Auth-form">
+        <form className="Auth-form" >
           <div className="Auth-form-content">
             <h3 className="Auth-form-title">Sign In</h3>
             <div className="form-group1">
@@ -24,11 +29,12 @@ const Form = () => {
                 type="password"
                 placeholder="Enter password"
                 className="formInput"
+                
               />
             </div>
             <div className="buttons">
               <div className="loginButton">
-                <LoginButton />
+                <LoginButton/>
               </div>
               <p>Don't have an account? Register here!</p>
               <div className="loginButton">
@@ -42,4 +48,7 @@ const Form = () => {
   );
 };
 
+
+
 export default Form;
+

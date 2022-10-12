@@ -4,14 +4,14 @@ import { useState } from "react";
 import ModalRegister from "../modals/ModalRegister";
 import Backdrop from "../modals/Backdrop";
 
+
 function SubmitRegisterButton(props) {
   const [RmodalIsOpen, setRModalIsOpen] = useState(false);
 
   function closeRModalHandler() {
     setRModalIsOpen(false);
   }
-  function registerHandler(e) {
-    e.preventDefault();
+  function registerHandler() {
     setRModalIsOpen(true);
   }
 
