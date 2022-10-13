@@ -11,14 +11,17 @@ import {useState} from 'react'
 
 function TextField() {
   const [title, setTitle] = useState('');
-  const [text, setText] = useState('');
-  const [select, setSelect] = useState('');
+  const nameUser = "idk";
+  const timeOfPost = "10-jun-2022";
+  const [description, setText] = useState('');
+  const [sportName, setSelect] = useState('');
+  const [picture, setPhoto] = useState();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const article = {title, text};
+    const article = {title, nameUser, sportName, timeOfPost, description, picture};
 
-    fetch('http://localhost:3000/mainpage', {
+    fetch('http://localhost:8080/announcements/add-announcement', {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(article)
@@ -59,19 +62,21 @@ function TextField() {
         <Textarea 
         className="textfield" 
         size="sm" 
-        value={text}
+        value={description}
         onChange={(e) => setText(e.target.value)}
-
         />
         <div>
           <div>
             <PostChoiceButton   
-            value={select}
+            value={sportName}
             onChange={(e) => setSelect(e.target.value)}
             />
           </div>
           <div>
-            <UploadPhotoButton />
+            <UploadPhotoButton 
+            value={picture}
+            onChange={(e) => setPhoto(e.target.value)}
+            />
           </div>
           <div>
             <button type="submit">Post</button>

@@ -69,9 +69,11 @@ public class UserController {
         }
     }
 
-    @GetMapping("/login")
+    @PostMapping("/login")
     public ResponseEntity login(@RequestBody LoginDTO loginDTO) {
         String email = loginDTO.getEmail();
+        System.out.println(loginDTO.getEmail());
+        System.out.println(loginDTO.getPassword());
         if(userService.getUsersByEmail(email).size() != 0) {
             User user = userService.getUsersByEmail(email).get(0);
             Argon2PasswordEncoder encoder = new Argon2PasswordEncoder(32,64,1,15*1024,2);
