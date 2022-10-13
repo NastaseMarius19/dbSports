@@ -1,14 +1,15 @@
 import React, { useState, useContext } from "react";
-import { LoginContext } from "./Context/LoginContext";
 import RegisterButton from "../buttons/RegisterButton";
-import LoginButton from "../buttons/LoginButton";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import {LoginContext} from '../Context/LoginContext'
+
 
 
 
 const Form = () => {
-  const {setEmail, setShowProfile} = useContext(LoginContext);
+  const context = useContext(LoginContext);
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
@@ -19,7 +20,7 @@ const Form = () => {
     try {
       await axios.post("http://localhost:8080/users/login",
         {
-          //email:email,
+          email:email,
           password:password,
         });
         navigate("/mainpage");
@@ -44,7 +45,7 @@ const Form = () => {
                 type="email"
                 placeholder="Enter email"
                 className="formInput"
-                //value={email}
+                value={email}
                 onChange={(event) => {
                   setEmail(event.target.value);
                 }}
@@ -64,7 +65,8 @@ const Form = () => {
             </div>
             <div className="buttons">
               <div className="loginButton">
-                <button type="submit" onClick={() => {setShowProfile(true)}}>Submit</button>
+                <button type="submit" 
+                  >Login</button>
               </div>
               <p>Don't have an account? Register here!</p>
               <div className="loginButton">
