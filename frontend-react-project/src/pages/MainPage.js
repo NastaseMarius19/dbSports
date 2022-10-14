@@ -1,10 +1,12 @@
 import NavbarMainPage from "../components/navbars/NavbarMainPage";
 import Sportlist from "../components/sportlist/Sportlist";
 import Subscriptions from "../components/subscriptions/Subscriptions";
-import { React, useState } from "react";
+import { React, useState, useContext } from "react";
 import DbSports from "../components/logos/DbSports";
+import {LoginContext} from '../components/Context/LoginContext'
 
 function MainPage() {
+  const {email} = useContext(LoginContext);
   const [inputText, setInputText] = useState("");
   let inputHandler = (e) => {
     //convert input text to lower case
@@ -40,6 +42,7 @@ function MainPage() {
           </div>
         </div>
       </nav>
+      <h2>Email: {email} </h2>
       <div className="main-comp">
         {/* <div className="main-list"> */}
         <Sportlist input={inputText} />

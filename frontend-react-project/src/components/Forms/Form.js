@@ -24,6 +24,7 @@ const Form = () => {
           password:password,
         });
         navigate("/mainpage");
+        context.setEmail(email);
         setEmail('');
         setPassword('');
     }
