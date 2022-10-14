@@ -8,42 +8,36 @@ import Grid from "@mui/material/Grid";
 import { CardHeader } from "@mui/material";
 import data from "./PostFeed.json";
 
-const card = (
-  <React.Fragment>
-  </React.Fragment>
-);
+const card = <React.Fragment></React.Fragment>;
 
 const Sportlist = (props) => {
-
   return (
-    <Box sx={{ m: 5 }}>
-      <Grid container spacing={3}>
-
-        {data.map((item) => (
-          <Grid item xs={10}>
-            <div className="feed">
-              <Card variant="outlined">
-                {card}
-                <CardHeader title={item.title} ></CardHeader>
-                <CardMedia
-                  component="img"
-                  height="300"
-                  image={item.imgsrc}
-                />
-                <CardContent
-                  className="cardcontent"
-                  style={{ backgroundColor: "#F1F3FF" }}
-                  sx={{ display: "flex" }}
-                  justify-content="space-evenly"
-                  flex-direction="column"
-                >{item.text}</CardContent>
-              </Card>
-            </div>
-          </Grid>
-        ))}
-
-      </Grid>
-    </Box>
+    <div className="main-list">
+      <Box sx={{ m: 5 }}>
+        <Grid container spacing={3}>
+          {data.map((item) => (
+            <Grid item xs={12}>
+              <div className="feed">
+                <Card variant="outlined">
+                  {card}
+                  <CardHeader title={item.title}></CardHeader>
+                  <CardMedia component="img" height="300" image={item.imgsrc} />
+                  <CardContent
+                    className="cardcontent"
+                    style={{ backgroundColor: "#F1F3FF" }}
+                    sx={{ display: "flex" }}
+                    justify-content="space-evenly"
+                    flex-direction="column"
+                  >
+                    {item.text}
+                  </CardContent>
+                </Card>
+              </div>
+            </Grid>
+          ))}
+        </Grid>
+      </Box>
+    </div>
   );
 };
 

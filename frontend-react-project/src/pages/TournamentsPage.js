@@ -5,15 +5,15 @@ import NavbarTournamentsPage from "../components/navbars/NavbarTournamentsPage";
 function TournamentsPage() {
   return (
     <div>
-      <div className="main-nav">
-        <NavbarTournamentsPage />
-      </div>
-      <div className="main-comp">
-        <div className="main-list">
-          <Sportlist />
-        </div>
-        <div className="main-subscriptions">
-          <Subscriptions />
+      <NavbarTournamentsPage />
+      <div className="mt-5">
+        <div className="row">
+          <div className="col-9 mt-1">
+            <Sportlist />
+          </div>
+          <div className="col-3 mt-0">
+            <Subscriptions />
+          </div>
         </div>
       </div>
     </div>

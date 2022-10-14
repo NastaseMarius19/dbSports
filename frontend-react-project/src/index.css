@@ -221,12 +221,27 @@ label {
   flex-grow: 0;
 }
 
+.navbar {
+  flex-direction: row-reverse;
+}
+
 .passwordInput {
   color: #52525c;
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+h2 {
+  color: black;
+}
+
+.subs2 .btn {
+  background: #0079d3;
+}
+
+.subs2 {
+  background-color: #f8f9fa;
 }
 
 .btn {
@@ -302,6 +317,34 @@ label {
   width: 100%;
 }
 
+.btn-post-logo {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #0018a8;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
 .button-9:disabled {
   cursor: default;
 }
@@ -334,12 +377,12 @@ label {
   text-transform: capitalize;
 }
 
-/* .cardcontent {
+.cardcontent {
   justify-content: space-evenly;
   flex-direction: column;
   background: #F1F3FF;
   display: flex;
-} */
+}
 
 .modal {
   display: flex;
@@ -403,12 +446,16 @@ div.modal {
 }
 
 .subs {
+  margin-top: 30px;
   display: flex;
   background-color: #0018a8;
   border: 1px;
   flex-direction: column;
   height: 768px;
   width: 100%;
+  border-radius: 40px;
+  padding: 10px;
+  align-items: center;
 }
 
 .subs-text {
@@ -445,19 +492,12 @@ div.modal {
 }
 
 
-.subs {
-  border-radius: 40px;
-  padding: 10px;
-  align-items: center;
-}
 
 /* .search-img {
   width: 30px;
   height: 30px;
 } */
-.container {
-  width: 50%;
-}
+
 
 .search-field {
   width: 100%;
@@ -529,10 +569,6 @@ div.modal {
   transform: translate(-50%, -50%);
 }
 
-.main-nav {
-  position: sticky;
-  top: 1px;
-}
 .dbsportsNav-content {
   display: flex;
   width: 100%;
@@ -547,3 +583,10 @@ div.modal {
   margin: 20px;
 }
 
+.main-list {
+  width: 100%;
+}
+
+.row {
+  width: 99%;
+}

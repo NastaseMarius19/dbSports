@@ -3,9 +3,9 @@ import Logo from "./Logo";
 const DbSports = () => {
   return (
     <div className="dbsports">
-      <div className="logo">
+      <div className="navbar-brand" href="#">
         <Logo />
-        <span>DB Sports</span>
+        <span> DB Sports</span>
       </div>
     </div>
   );
