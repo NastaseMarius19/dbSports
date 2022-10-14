@@ -47,7 +47,6 @@ const Sportlist = (props) => {
             </div>
           </Grid>
         ))}
-
       </Grid>
     </Box>
   );

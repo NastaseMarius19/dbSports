@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from 'react';
 import { Textarea } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 // import { extendTheme } from "@chakra-ui/react";
@@ -45,7 +45,8 @@ function TextField() {
       <form onSubmit={handleSubmit}>
       <div className="post-content">
         <div>
-        <Text mb="8px" className="posttitle">
+        <Text mb="8px" 
+        className="posttitle">
           Title
         </Text>
         </div>
@@ -53,6 +54,7 @@ function TextField() {
           
         </div>
         <Textarea
+          className="textarea"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
@@ -77,13 +79,28 @@ function TextField() {
             value={picture}
             onChange={(e) => setPhoto(e.target.value)}
             />
+
+        <Textarea className="textfield" size="sm" 
+        value={body}
+        onChange={(e) => setBody(e.target.value)}/>
+        <div>
+          <div>
+            <PostChoiceButton 
+            value = {sport}
+            onChange={(e) => setSport(e.target.value)}/>
           </div>
           <div>
             <button type="submit">Post</button>
           </div>
         </div>
+        { !isPending && <button>Post</button>}
+        { isPending && <button>Adding post...</button>}
       </div>
       </form>
+
+
+      
+
     </div>
   );
 }
