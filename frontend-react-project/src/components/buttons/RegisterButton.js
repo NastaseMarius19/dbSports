@@ -8,7 +8,7 @@ const RegisterButton = () => {
     <div>
       <button
         onClick={() => navigate("/register")}
-        className="btn btn-register"
+        className="btn btn-post"
       >
         Register
       </button>

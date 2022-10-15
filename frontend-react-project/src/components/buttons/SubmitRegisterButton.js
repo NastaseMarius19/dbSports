@@ -18,7 +18,7 @@ function SubmitRegisterButton(props) {
   return (
     <div>
       <div>
-        <button className="btn btn-register" onClick={registerHandler}>
+        <button className="btn btn-post" onClick={registerHandler}>
           Register
         </button>
       </div>

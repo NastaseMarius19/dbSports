@@ -9,7 +9,7 @@ const BackToLoginButton = () => {
     <div>
       <button onClick={() => {
         navigate("/")}
-        } className="btn btn-register">
+        } className="btn btn-post">
         Back to login
       </button>
     </div>
