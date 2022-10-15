@@ -36,7 +36,7 @@ const NavbarTournamentsPage = () => {
           <LogoButton />
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

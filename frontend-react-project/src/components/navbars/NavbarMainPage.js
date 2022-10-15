@@ -42,7 +42,7 @@ const NavbarMainPage = () => {
         </div>
 
       </div>
-    </div>
+    </nav>
   );
 };
 
