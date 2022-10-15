@@ -426,7 +426,7 @@ h2 {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background-color: white;
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
   width: 20rem;
   height: 5rem;
@@ -611,7 +611,7 @@ div.modal {
 .rform {
   position: absolute;
   left: 50%;
-  top: 65%;
+  top: 60%;
   transform: translate(-50%, -50%);
 }
 
