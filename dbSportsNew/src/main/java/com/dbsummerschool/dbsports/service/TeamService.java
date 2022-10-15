@@ -26,4 +26,12 @@ public class TeamService {
         team.setUsers(users);
         return teamRepository.save(team);
     }
+
+    public List<Team> getAllByName(String name) {
+        return teamRepository.findAllByName(name);
+    }
+
+    public void updateUserList(Team team){
+        teamRepository.save(team);
+    }
 }

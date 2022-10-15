@@ -1,6 +1,8 @@
 package com.dbsummerschool.dbsports.controller;
 
+import com.dbsummerschool.dbsports.dtos.TeamAuxDTO;
 import com.dbsummerschool.dbsports.dtos.TeamDTO;
+import com.dbsummerschool.dbsports.model.Team;
 import com.dbsummerschool.dbsports.model.User;
 import com.dbsummerschool.dbsports.service.TeamService;
 import com.dbsummerschool.dbsports.service.UserService;
@@ -41,5 +43,18 @@ public class TeamController {
         }
         teamService.addTeam(teamDTO, usersList);
         return ResponseEntity.status(HttpStatus.CREATED).body("Team created!");
+    }
+
+    @PostMapping("/add-user")
+    public ResponseEntity addUser(@RequestBody TeamAuxDTO teamDTO) {
+        String email = teamDTO.getEmail();
+        String nameTeam = teamDTO.getName();
+        System.out.println(email);
+        User user = userService.getUsersByEmail(email).get(0);
+        Team team = teamService.getAllByName(nameTeam).get(0);
+        team.getUsers().add(user);
+        teamService.updateUserList(team);
+        return ResponseEntity.status(HttpStatus.OK).body("User added successfully!");
+
     }
 }
