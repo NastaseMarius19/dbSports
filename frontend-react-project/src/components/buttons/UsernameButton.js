@@ -18,7 +18,7 @@ function UsernameButton(props) {
         <button 
         className="btn btn-post" 
         onClick={signoutHandler}>
-          User
+          Logout
         </button>
       </div>
       {modalIsOpen && <ModalSignout onCancel={closeModalHandler} />}

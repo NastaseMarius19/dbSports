@@ -1,18 +1,21 @@
 import React from 'react'
-import { useNavigate } from "react-router-dom";
+import DbSports from '../logos/DbSports';
 
-const LogoButton = () => {
-  const navigate = useNavigate();
+function LogoButton() {
+  function refreshPage(){
+    window.location.reload();
+}
   return (
     <div>
-       
-        <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Deutsche_Bank_logo_without_wordmark.svg/1024px-Deutsche_Bank_logo_without_wordmark.svg.png" 
-        alt="my image" 
-        onClick={() => navigate("/mainpage")} />
-        </button>
-
+      <button
+        type="submit"
+        className="btn btn-post bg-light"
+        onClick={refreshPage}
+      >
+        <DbSports />
+      </button>
     </div>
-  )
+  );
 }
 
 export default LogoButton

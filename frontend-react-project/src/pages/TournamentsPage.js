@@ -6,33 +6,15 @@ import DbSports from "../components/logos/DbSports";
 function TournamentsPage() {
   return (
     <div>
-      <nav>
-        <div className="dbsportsNav">
-          <div className="dbsportsNav-content">
-            <div class="container">
-              <input type="search" placeholder="Search" class="search-field" />
-              <button type="submit" class="search-button">
-                <img
-                  src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
-                  alt="mglass"
-                />
-              </button>
-            </div>
-            <div className="main-nav">
-              <NavbarTournamentsPage />
-            </div>
+      <NavbarTournamentsPage />
+      <div className="mt-5">
+        <div className="row">
+          <div className="col-9 mt-1">
+            <Sportlist />
           </div>
-          <div className="logo">
-            <DbSports />
+          <div className="col-3 mt-0">
+            <Subscriptions />
           </div>
-        </div>
-      </nav>
-      <div className="main-comp">
-        <div className="main-list">
-          <Sportlist />
-        </div>
-        <div className="main-subscriptions">
-          <Subscriptions />
         </div>
       </div>
     </div>

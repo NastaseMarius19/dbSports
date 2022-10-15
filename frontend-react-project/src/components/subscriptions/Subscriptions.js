@@ -1,18 +1,30 @@
 import React from "react";
+import { useState } from "react";
+import SubscriptionsButton from "../buttons/SubscriptionsButton";
 
 function Subscriptions() {
-  return (
-    <div className="subs">
-      <div className="subs-text">Subscriptions</div>
+  const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
 
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
-      <div className="sub-element btn">#football</div>
+  return (
+    <div className="card mt-5 subs2">
+      <div className="card-body">
+        <div className="card-title"><h2>Subscriptions</h2></div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#football" />
+        </div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#football" />
+        </div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#football" />
+        </div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#basketball" />
+        </div>
+      </div>
     </div>
   );
 }
