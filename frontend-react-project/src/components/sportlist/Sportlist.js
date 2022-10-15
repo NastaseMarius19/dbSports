@@ -38,6 +38,7 @@ const Sportlist = (props) => {
         </Grid>
       </Box>
     </div>
+
   );
 };
 

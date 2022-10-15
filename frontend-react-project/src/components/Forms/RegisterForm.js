@@ -9,7 +9,7 @@ const RegisterForm = () => {
   const [lastname, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [repeatpassword, setRepeatPassword] = useState('');
+  //const [repeatpassword, setRepeatPassword] = useState('');
 
 
   async function handleSubmit(event){
@@ -17,22 +17,24 @@ const RegisterForm = () => {
     try {
       await axios.post("http://localhost:8080/users/register",
         {
-          firstname:firstname,
-          lastname:lastname,
+          name:firstname,
+          surname:lastname,
           email:email,
           password:password,
-          repeatpassword: repeatpassword
+
+          //repeatpassword: repeatpassword
         });
         alert("User registered with succes");
         setName('');
         setLastName('');
         setEmail('');
         setPassword('');
-        setRepeatPassword('');
+        //setRepeatPassword('');
     }
     catch(err){
       alert("Registration failed");
     }
+    
   }
 
   return (
@@ -91,9 +93,9 @@ const RegisterForm = () => {
                 type="password"
                 placeholder="Repeat password"
                 className="formInput"
-                onChange={(event) => {
-                  setRepeatPassword(event.target.value);
-                }}
+                // onChange={(event) => {
+                //   setRepeatPassword(event.target.value);
+                // }}
               />
             </div>
             <div className="buttons">

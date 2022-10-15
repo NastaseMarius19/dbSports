@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from 'react';
 import { Textarea } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 // import { extendTheme } from "@chakra-ui/react";
@@ -7,14 +7,31 @@ import DbSports from "../logos/DbSports";
 
 import PostChoiceButton from "../buttons/PostChoiceButton";
 import UploadPhotoButton from "../buttons/UploadPhotoButton";
+import {useState} from 'react'
 
 function TextField() {
-  let [value, setValue] = React.useState("");
+  const [title, setTitle] = useState('');
+  const nameUser = "idk";
+  const timeOfPost = "10-jun-2022";
+  const [description, setText] = useState('');
+  const [sportName, setSelect] = useState('');
+  const [picture, setPhoto] = useState();
 
-  let handleInputChange = (e) => {
-    let inputValue = e.target.value;
-    setValue(inputValue);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const article = {title, nameUser, sportName, timeOfPost, description, picture};
+
+    fetch('http://localhost:8080/announcements/add-announcement', {
+      method: 'POST',
+      headers: {"Content-Type": "application/json"},
+      body: JSON.stringify(article)
+    }).then(()=> {
+      console.log('new blog added')
+      console.log(article)
+    })
+  }
+
+
   return (
     <div>
       <div className="buttonpostpage">
@@ -25,9 +42,11 @@ function TextField() {
           <DbSports />
         </div>
       </div>
+      <form onSubmit={handleSubmit}>
       <div className="post-content">
         <div>
-        <Text mb="8px" className="posttitle">
+        <Text mb="8px" 
+        className="posttitle">
           Title
         </Text>
         </div>
@@ -35,24 +54,53 @@ function TextField() {
           
         </div>
         <Textarea
-          value={value}
-          onChange={handleInputChange}
           className="textarea"
-          size="sm"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <Text mb="8px" className="posttitle" font-size="22px">
           Text Input
         </Text>
-        <Textarea className="textfield" size="sm" />
+        <Textarea 
+        className="textfield" 
+        size="sm" 
+        value={description}
+        onChange={(e) => setText(e.target.value)}
+        />
         <div>
           <div>
-            <PostChoiceButton />
+            <PostChoiceButton   
+            value={sportName}
+            onChange={(e) => setSelect(e.target.value)}
+            />
           </div>
           <div>
-            <UploadPhotoButton />
+            <UploadPhotoButton 
+            value={picture}
+            onChange={(e) => setPhoto(e.target.value)}
+            />
+
+        <Textarea className="textfield" size="sm" 
+        value={body}
+        onChange={(e) => setBody(e.target.value)}/>
+        <div>
+          <div>
+            <PostChoiceButton 
+            value = {sport}
+            onChange={(e) => setSport(e.target.value)}/>
+          </div>
+          <div>
+            <button type="submit">Post</button>
           </div>
         </div>
+        { !isPending && <button>Post</button>}
+        { isPending && <button>Adding post...</button>}
       </div>
+      </form>
+
+
+      
+
     </div>
   );
 }

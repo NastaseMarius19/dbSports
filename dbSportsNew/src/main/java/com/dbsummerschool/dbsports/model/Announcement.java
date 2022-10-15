@@ -28,11 +28,23 @@ public class Announcement {
     @ManyToOne
     private Sport sport;
 
-    public Announcement(int announcement_id, String postingUser, Date timeOfPost, Sport sport) {
-        this.announcement_id = announcement_id;
+    @Column(nullable = false)
+    private String title;
+
+    @Column(nullable = false)
+    private String description;
+
+    @Lob
+    @Basic(fetch = FetchType.LAZY)
+    private byte[] picture;
+
+    public Announcement(String postingUser, Date timeOfPost, Sport sport, String title, String description, byte[] picture) {
         this.postingUser = postingUser;
         this.timeOfPost = timeOfPost;
         this.sport = sport;
+        this.title = title;
+        this.description = description;
+        this.picture = picture;
     }
 
     @Override

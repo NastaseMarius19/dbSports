@@ -14,8 +14,7 @@ function ModalRegister(props) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      await axios.get("http://localhost:8080/users/verify/".concat({code}), {
-        code: code,
+      await axios.get(`http://localhost:8080/users/verify/` + code, {
       });
       setCode("");
     } catch (err) {
@@ -46,7 +45,7 @@ function ModalRegister(props) {
       </div>
       <div className="modalButtons">
         <div>
-          <CodeSubmitButton />
+          <CodeSubmitButton onClick={handleSubmit}/>
         </div>
         <div>
           <button className="btn btn-post" onClick={RcancelHandler}>

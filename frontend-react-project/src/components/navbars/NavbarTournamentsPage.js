@@ -6,6 +6,7 @@ import LogoButton from "../buttons/LogoButton";
 
 const NavbarTournamentsPage = () => {
   return (
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top">
       <button
         class="navbar-toggler"
@@ -35,7 +36,7 @@ const NavbarTournamentsPage = () => {
           <LogoButton />
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

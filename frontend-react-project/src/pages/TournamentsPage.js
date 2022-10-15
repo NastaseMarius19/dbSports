@@ -1,6 +1,7 @@
 import Sportlist from "../components/sportlist/Sportlist";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 import NavbarTournamentsPage from "../components/navbars/NavbarTournamentsPage";
+import DbSports from "../components/logos/DbSports";
 
 function TournamentsPage() {
   return (
