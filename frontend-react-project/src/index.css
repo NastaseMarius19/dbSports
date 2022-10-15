@@ -357,6 +357,28 @@ label {
   flex-direction: column;
   justify-content: space-around;
 }
+
+.modal2 {
+  display: flex;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 28rem;
+  height: 15rem;
+  z-index: 10;
+  position: fixed;
+  top: 30vh;
+  left: calc(50% - 15rem);
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+div.modal2 {
+  font-size: 16px;
+}
+
 div.modal {
   font-size: 16px;
 }
@@ -497,6 +519,13 @@ div.modal {
   position: absolute;
   left: 50%;
   top: 70%;
+  transform: translate(-50%, -50%);
+}
+
+.rform{
+  position: absolute;
+  left: 50%;
+  top: 65%;
   transform: translate(-50%, -50%);
 }
 

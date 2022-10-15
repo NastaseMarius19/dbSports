@@ -7,30 +7,29 @@ import DbSports from "../logos/DbSports";
 
 import PostChoiceButton from "../buttons/PostChoiceButton";
 import UploadPhotoButton from "../buttons/UploadPhotoButton";
+import {useState} from 'react'
 
 function TextField() {
-  const[title, setTitle] = useState('');
-  const[body,setBody] = useState('');
-  const[sport,setSport] = useState('Download');
-  const[isPending, setIsPending] = useState(false);
+  const [title, setTitle] = useState('');
+  const nameUser = "idk";
+  const timeOfPost = "10-jun-2022";
+  const [description, setText] = useState('');
+  const [sportName, setSelect] = useState('');
+  const [picture, setPhoto] = useState();
 
-  const handleSubmit= (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const sports = {title,  body, sport};
+    const article = {title, nameUser, sportName, timeOfPost, description, picture};
 
-    setIsPending(true);
-
-    fetch('http://localhost:3000/mainpage', {
+    fetch('http://localhost:8080/announcements/add-announcement', {
       method: 'POST',
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(sports)
-    }).then(() => {
-
-      console.log('new article added');
-      setIsPending(false);
+      body: JSON.stringify(article)
+    }).then(()=> {
+      console.log('new blog added')
+      console.log(article)
     })
   }
-
 
 
   return (
@@ -62,6 +61,25 @@ function TextField() {
         <Text mb="8px" className="posttitle" font-size="22px">
           Text Input
         </Text>
+        <Textarea 
+        className="textfield" 
+        size="sm" 
+        value={description}
+        onChange={(e) => setText(e.target.value)}
+        />
+        <div>
+          <div>
+            <PostChoiceButton   
+            value={sportName}
+            onChange={(e) => setSelect(e.target.value)}
+            />
+          </div>
+          <div>
+            <UploadPhotoButton 
+            value={picture}
+            onChange={(e) => setPhoto(e.target.value)}
+            />
+
         <Textarea className="textfield" size="sm" 
         value={body}
         onChange={(e) => setBody(e.target.value)}/>
@@ -72,7 +90,7 @@ function TextField() {
             onChange={(e) => setSport(e.target.value)}/>
           </div>
           <div>
-            <UploadPhotoButton />
+            <button type="submit">Post</button>
           </div>
         </div>
         { !isPending && <button>Post</button>}
@@ -80,8 +98,9 @@ function TextField() {
       </div>
       </form>
 
+
       
-      
+
     </div>
   );
 }

@@ -1,11 +1,31 @@
 import React from "react";
+import { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import ModalRegister from "../modals/ModalRegister";
+import Backdrop from "../modals/Backdrop";
 
-const SubmitRegisterButton = () => {
+
+function SubmitRegisterButton(props) {
+  const [RmodalIsOpen, setRModalIsOpen] = useState(false);
+
+  function closeRModalHandler() {
+    setRModalIsOpen(false);
+  }
+  function registerHandler() {
+    setRModalIsOpen(true);
+  }
+
   return (
     <div>
-      <button className="btn btn-login">Register</button>
+      <div>
+        <button className="btn btn-register" onClick={registerHandler}>
+          Register
+        </button>
+      </div>
+      {RmodalIsOpen && <ModalRegister onCancel={closeRModalHandler} />}
+      {RmodalIsOpen && <Backdrop onClick={closeRModalHandler} />}
     </div>
   );
-};
+}
 
 export default SubmitRegisterButton;
