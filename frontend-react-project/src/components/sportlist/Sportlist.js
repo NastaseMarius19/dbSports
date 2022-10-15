@@ -8,37 +8,45 @@ import Grid from "@mui/material/Grid";
 import { CardHeader } from "@mui/material";
 import data from "./PostFeed.json";
 
-const card = <React.Fragment></React.Fragment>;
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
 
 const Sportlist = (props) => {
   return (
-    <div className="main-list">
-      <Box sx={{ m: 5 }}>
-        <Grid container spacing={3}>
-          {data.map((item) => (
-            <Grid item xs={12}>
-              <div className="feed">
-                <Card variant="outlined">
-                  {card}
-                  <CardHeader title={item.title}></CardHeader>
-                  <CardMedia component="img" height="300" image={item.imgsrc} />
-                  <CardContent
-                    className="cardcontent"
-                    style={{ backgroundColor: "#F1F3FF" }}
-                    sx={{ display: "flex" }}
-                    justify-content="space-evenly"
-                    flex-direction="column"
-                  >
-                    {item.text}
-                  </CardContent>
-                </Card>
-              </div>
-            </Grid>
-          ))}
-        </Grid>
-      </Box>
-    </div>
+    <Box sx={{ m: 5 }}>
+      <Grid container spacing={3}>
 
+        {filteredData.map((item) => (
+          <Grid item xs={10}>
+            <div className="feed">
+              <Card variant="outlined">
+                <CardHeader title={item.title} ></CardHeader>
+                <CardMedia
+                  component="img"
+                  height="300"
+                  image={item.imgsrc}
+                />
+                <CardContent
+                  className="cardcontent"
+                  style={{ backgroundColor: "#F1F3FF" }}
+                  sx={{ display: "flex" }}
+                  justify-content="space-evenly"
+                  flex-direction="column"
+                >{item.text}</CardContent>
+                <CardActions>
+                  <Typography color="text.secondary">
+                    Posted by {item.username} in {item.sport}
+                  </Typography>
+                  <Typography color="text.secondary">
+                    {item.postdate}
+                  </Typography>
+                </CardActions>
+              </Card>
+            </div>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
   );
 };
 
