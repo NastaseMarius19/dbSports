@@ -1,4 +1,4 @@
-import Sportlist from "../components/sportlist/Sportlist";
+import Tournaments from "../components/tournaments/Tournaments";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 import NavbarTournamentsPage from "../components/navbars/NavbarTournamentsPage";
 import DbSports from "../components/logos/DbSports";
@@ -10,7 +10,7 @@ function TournamentsPage() {
       <div className="mt-5">
         <div className="row">
           <div className="col-9 mt-1">
-            <Sportlist />
+            <Tournaments />
           </div>
           <div className="col-3 mt-0">
             <Subscriptions />

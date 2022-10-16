@@ -12,11 +12,22 @@ import CardActions from '@mui/material/CardActions';
 import Button from '@mui/material/Button';
 
 const Sportlist = (props) => {
+
+  const filteredData = data.filter((el) => {
+    if (props.input === '') {
+      return el;
+    }
+    else {
+      return el.text.toLowerCase().includes(props.input)
+    }
+  })
+  //ca sa fie activat search ul trb mutat search bar ul din NavBarMainPage in MainPage
+
   return (
     <Box sx={{ m: 5 }}>
       <Grid container spacing={3}>
 
-        {filteredData.map((item) => (
+        {data.map((item) => (
           <Grid item xs={10}>
             <div className="feed">
               <Card variant="outlined">
@@ -35,10 +46,10 @@ const Sportlist = (props) => {
                 >{item.text}</CardContent>
                 <CardActions>
                   <Typography color="text.secondary">
-                    Posted by {item.username} in {item.sport}
+                    {item.postdate}
                   </Typography>
                   <Typography color="text.secondary">
-                    {item.postdate}
+                    Posted by {item.username} in {item.sport}
                   </Typography>
                 </CardActions>
               </Card>
