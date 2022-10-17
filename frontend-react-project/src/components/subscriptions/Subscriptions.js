@@ -16,10 +16,10 @@ function Subscriptions() {
           <SubscriptionsButton text="#football" />
         </div>
         <div className="sport-div">
-          <SubscriptionsButton text="#football" />
+          <SubscriptionsButton text="#table tennis" />
         </div>
         <div className="sport-div">
-          <SubscriptionsButton text="#football" />
+          <SubscriptionsButton text="#badminton" />
         </div>
         <div className="sport-div">
           <SubscriptionsButton text="#basketball" />
