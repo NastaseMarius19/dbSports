@@ -640,3 +640,13 @@ div.modal {
 .row {
   width: 99%;
 }
+
+.btn-create {
+  margin: 10px;
+  width: 200px;
+}
+
+.form-create {
+  width: 200px;
+  margin: 10px;
+}
