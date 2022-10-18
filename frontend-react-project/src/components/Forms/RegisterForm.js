@@ -49,8 +49,10 @@ const RegisterForm = () => {
                 type="text"
                 placeholder="Enter First Name"
                 className="formInput"
+                required
                 onChange={(event) => {
                   setName(event.target.value);
+                
                 }}
               />
             </div>
@@ -60,6 +62,7 @@ const RegisterForm = () => {
                 type="text"
                 placeholder="Enter your Last Name"
                 className="formInput"
+                required
                 onChange={(event) => {
                   setLastName(event.target.value);
                 }}
@@ -71,6 +74,7 @@ const RegisterForm = () => {
                 type="email"
                 placeholder="Enter email"
                 className="formInput"
+                required
                 onChange={(event) => {
                   setEmail(event.target.value);
                 }}
@@ -82,6 +86,7 @@ const RegisterForm = () => {
                 type="password"
                 placeholder="Enter password"
                 className="formInput"
+                required
                 onChange={(event) => {
                   setPassword(event.target.value);
                 }}
@@ -93,6 +98,7 @@ const RegisterForm = () => {
                 type="password"
                 placeholder="Repeat password"
                 className="formInput"
+                required
                 // onChange={(event) => {
                 //   setRepeatPassword(event.target.value);
                 // }}

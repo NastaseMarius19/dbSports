@@ -3,7 +3,7 @@ const CreateTeamButton = () => {
     return (
         <div>
             <button className="btn btn-post">
-                Create Team
+                Create a Team
             </button>
         </div>
     );
