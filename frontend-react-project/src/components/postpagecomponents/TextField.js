@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+
+import React, { useState, useContext } from 'react';
+
 import { Textarea } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 // import { extendTheme } from "@chakra-ui/react";
@@ -6,35 +8,42 @@ import ReturnToMainPageButton from "../buttons/ReturnToMainPageButton";
 import DbSports from "../logos/DbSports";
 import PostChoiceButton from "../buttons/PostChoiceButton";
 import UploadPhotoButton from "../buttons/UploadPhotoButton";
+import { LoginContext } from '../Context/LoginContext';
+import axios from 'axios';
 
-function TextField() {
-  const [title, setTitle] = useState("");
-  const nameUser = "idk";
-  const timeOfPost = "10-jun-2022";
-  const [description, setText] = useState("");
-  const [sportName, setSelect] = useState("");
+
+function TextField(props) {
+  const { email } = useContext(LoginContext);
+  const [title, setTitle] = useState('');
+  const [description, setText] = useState('');
+  const [timeOfPost, setTimeOfPost] = useState('');
+  const [sportName, setSportName] = useState('');
   const [picture, setPhoto] = useState();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const article = {
-      title,
-      nameUser,
-      sportName,
-      timeOfPost,
-      description,
-      picture,
-    };
+  async function handleSubmit(event){
+    console.log(email);
+    console.log(title);
+    console.log(description);
+    console.log(sportName);
+    console.log(picture);
+    event.preventDefault();
+    
+    try {
+      await axios.post("http://localhost:8080/announcements/add-announcement",
+        {
+          email:email,
+          title:title,
+          description: description,
+          sportName: sportName,
+          picture: []
+        });
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+  }
 
-    fetch("http://localhost:8080/announcements/add-announcement", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(article),
-    }).then(() => {
-      console.log("new blog added");
-      console.log(article);
-    });
-  };
 
   return (
     <div>
@@ -72,16 +81,18 @@ function TextField() {
             <div>
               <PostChoiceButton
                 value={sportName}
-                onChange={(e) => setSelect(e.target.value)}
+                setSportName={setSportName}
               />
             </div>
             <div>
-              <div>
-                <UploadPhotoButton
-                  value={picture}
-                  onChange={(e) => setPhoto(e.target.value)}
-                />
-              </div>
+              <UploadPhotoButton
+                value={picture}
+                setPhoto={setPhoto}
+              />
+
+              <Textarea className="textfield" size="sm"
+                 />
+
               <div>
                 <button type="submit" className="btn btn-post btnsize">
                   Post
