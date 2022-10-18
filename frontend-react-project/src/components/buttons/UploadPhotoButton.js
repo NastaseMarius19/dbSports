@@ -1,15 +1,29 @@
 import React, { useState } from "react";
 
-const UploadPhotoButton = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+const UploadPhotoButton = (props) => {
+  function readFileDataAsBase64(e) {
+    const file = e.target.files[0];
 
-  return (
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = (event) => {
+            resolve(event.target.result);
+        };
+
+        reader.onerror = (err) => {
+            reject(err);
+        };
+        return reader.readAsDataURL(file);
+    });
+  }
+  return ( 
     <div>
-      {selectedImage && (
+      {props.value && (
         <div>
-        <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+        <img alt="not found" width={"250px"} src={URL.createObjectURL(props.value)} />
         <br />
-        <button className="btn btn-post" onClick={()=>setSelectedImage(null)}>Remove</button>
+        <button className="btn btn-post" onClick={()=>props.setPhoto(null)}>Remove</button>
         </div>
       )}
       <br />
@@ -20,7 +34,7 @@ const UploadPhotoButton = () => {
         name="myImage"
         onChange={(event) => {
           console.log(event.target.files[0]);
-          setSelectedImage(event.target.files[0]);
+          props.setPhoto(event.target.files[0]);
         }}
       />
     </div>
