@@ -8,7 +8,7 @@ import LogoButton from "../buttons/LogoButton";
 const NavbarMainPage = () => {
   return (
 
-    <nav className="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top p-3">
       <button
         class="navbar-toggler"
         data-toggle="collapse"
@@ -19,7 +19,7 @@ const NavbarMainPage = () => {
       </button>
       <div className="collapse navbar-collapse" id="navLinks">
         <div class="container">
-          <input type="search" placeholder="Search" class="search-field" />
+        <input type="search" placeholder="Search" class="search-field" />
           <button type="submit" class="search-button">
             <img
               src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
@@ -40,7 +40,6 @@ const NavbarMainPage = () => {
         <div className="logo">
           <LogoButton />
         </div>
-
       </div>
     </nav>
   );

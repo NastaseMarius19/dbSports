@@ -1,4 +1,6 @@
+
 import React, { useState, useContext } from 'react';
+
 import { Textarea } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 // import { extendTheme } from "@chakra-ui/react";
@@ -8,6 +10,7 @@ import PostChoiceButton from "../buttons/PostChoiceButton";
 import UploadPhotoButton from "../buttons/UploadPhotoButton";
 import { LoginContext } from '../Context/LoginContext';
 import axios from 'axios';
+
 
 function TextField(props) {
   const { email } = useContext(LoginContext);
@@ -55,14 +58,11 @@ function TextField(props) {
       <form onSubmit={handleSubmit}>
         <div className="post-content">
           <div>
-            <Text mb="8px"
-              className="posttitle">
+            <Text mb="8px" className="posttitle">
               Title
             </Text>
           </div>
-          <div>
-
-          </div>
+          <div></div>
           <Textarea
             className="textarea"
             value={title}
@@ -92,13 +92,11 @@ function TextField(props) {
 
               <Textarea className="textfield" size="sm"
                  />
+
               <div>
-                <div>
-                  <PostChoiceButton />
-                </div>
-                <div>
-                  <button type="submit">Post</button>
-                </div>
+                <button type="submit" className="btn btn-post btnsize">
+                  Post
+                </button>
               </div>
               {/* {!isPending && <button>Post</button>}
               {isPending && <button>Adding post...</button>} */}
@@ -108,7 +106,6 @@ function TextField(props) {
       </form>
     </div>
   );
-
 }
 
 export default TextField;

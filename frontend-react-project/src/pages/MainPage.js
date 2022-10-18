@@ -3,7 +3,9 @@ import Sportlist from "../components/sportlist/Sportlist";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 import { React, useState, useContext } from "react";
 import DbSports from "../components/logos/DbSports";
-import { LoginContext } from '../components/Context/LoginContext'
+
+import { LoginContext } from "../components/Context/LoginContext";
+
 
 function MainPage() {
   const { email } = useContext(LoginContext);
@@ -15,8 +17,9 @@ function MainPage() {
   };
   return (
     <div>
+      
       <NavbarMainPage />
-      <h2>Email: {email} </h2>
+      
       <div className="mt-5">
         <div className="row">
           <div className="col-9 mt-1">
@@ -24,6 +27,7 @@ function MainPage() {
           </div>
           <div className="col-3 mt-0">
             <Subscriptions />
+            <h2>Email: {email} </h2>
           </div>
         </div>
       </div>
