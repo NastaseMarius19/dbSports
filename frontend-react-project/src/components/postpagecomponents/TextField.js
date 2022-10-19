@@ -31,10 +31,11 @@ function TextField(props) {
     try {
       await axios.post("http://localhost:8080/announcements/add-announcement",
         {
-          email:email,
           title:title,
-          description: description,
+          email:email,
           sportName: sportName,
+          timeOfPost: timeOfPost,
+          description: description,
           picture: []
         });
     }
