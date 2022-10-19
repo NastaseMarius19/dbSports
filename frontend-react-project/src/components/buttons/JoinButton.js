@@ -1,30 +1,28 @@
 import { useState } from "react";
 import Backdrop from "../modals/Backdrop";
-import ModalSignout from "../modals/ModalSignout";
+import ModalJoin from "../modals/ModalJoin";
 
-function UsernameButton(props) {
+function JoinButton(props) {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   function closeModalHandler() {
     setModalIsOpen(false);
   }
-  function signoutHandler() {
+  function joinHandler() {
     setModalIsOpen(true);
   }
 
   return (
     <div>
       <div>
-        <button 
-        className="btn btn-post" 
-        onClick={signoutHandler}>
-          Logout
+        <button className="btn btn-post" onClick={joinHandler}>
+          Join
         </button>
       </div>
-      {modalIsOpen && <ModalSignout onCancel={closeModalHandler} />}
+      {modalIsOpen && <ModalJoin onCancel={closeModalHandler} />}
       {modalIsOpen && <Backdrop onClick={closeModalHandler} />}
     </div>
   );
 }
 
-export default UsernameButton;
+export default JoinButton;

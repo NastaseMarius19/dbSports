@@ -12,22 +12,20 @@ import {
   } from '@chakra-ui/react'
 
   
-const PostChoiceButton = () => {
+const PostChoiceButton = (props) => {
+    function choose(e) {
+     {
+        props.setSportName(e.target.value);
+     }
+    }
     return (
-        <>
-        <Menu>
-        <MenuButton as={Button}>
-          Actions
-        </MenuButton>
-        <MenuList>
-          <MenuItem>Download</MenuItem>
-          <MenuItem>Create a Copy</MenuItem>
-          <MenuItem>Mark as Draft</MenuItem>
-          <MenuItem>Delete</MenuItem>
-          <MenuItem>Attend a Workshop</MenuItem>
-        </MenuList>
-      </Menu>
-        </>
+        <select onChange={choose} value={props.value}>
+          <option >Football</option>
+          <option >Tennis Table</option>
+          <option >Tennis</option>
+          <option>Golf</option>
+        </select>
+     
     
     )
   }

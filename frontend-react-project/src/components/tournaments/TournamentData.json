@@ -1,45 +1,42 @@
 [
     {
         "id": 1,
-        "title": "Sportul Rege",
+        "title": "DB football's first edition",
         "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at est ex. Nam vehicula gravida turpis, vulputate condimentum tellus vehicula et. Ut elementum est nec ante malesuada dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec est et mi interdum accumsan vitae id ipsum. Nunc nec ullamcorper ante. Praesent sit amet lacinia mauris. Sed cursus eget lacus quis ultricies. Sed luctus interdum consectetur. Duis blandit, dolor hendrerit consectetur gravida, turpis orci condimentum risus, sed malesuada elit nisl in libero. Proin diam enim, dictum ut enim et, laoreet hendrerit arcu. Vestibulum ac venenatis metus, eget cursus nulla. Aliquam nec placerat mi. Suspendisse vel ligula eu augue congue commodo. Vivamus auctor ante sit amet nunc ultricies porta. Morbi suscipit neque in mauris molestie venenatis.",
-        "imgsrc": "https://www.pontul-zilei.com/wp-content/uploads/2020/01/Tot-ce-trebuie-sa-stii-despre-fotbal.jpg",
-        "username": "Alex",
+        "imgsrc": "https://ro.schreder.com/sites/store18/files/styles/600_large/cdchub/2021-05/Sports-lighting-solutions-for-football-rugby-pitches_0.jpg?itok=lqPD6_9q",
         "sport": "Football",
-        "postdate": "1/1/2022"
+        "eventdate": "1/1/2022"
     },
     {
         "id": 2,
-        "title": "Basketball is everywhere",
+        "title": "Ping-Pong la sediu",
         "text": "Nulla sit amet felis id leo vestibulum dictum non eu augue. Sed tincidunt sem sed nulla facilisis volutpat. Maecenas dignissim pulvinar nisl vitae fermentum. Vivamus dolor urna, porta tempor arcu in, lacinia lacinia eros. Vestibulum a lacinia ligula, in placerat orci. Etiam quis diam sit amet dui ultrices pharetra. Curabitur justo libero, placerat non lobortis non, sagittis sit amet elit. Etiam mattis magna id eleifend tincidunt. Proin sollicitudin, felis ac sodales placerat, turpis lorem efficitur dui, sit amet consectetur sem enim id risus. Sed tincidunt nisi id tellus lobortis, at efficitur mi rhoncus. Aenean mattis libero ac sapien accumsan, a pharetra leo eleifend. Fusce non enim lectus. Sed eget magna nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eleifend euismod rhoncus.",
-        "imgsrc": "https://www.fiba.basketball/images.fiba.com/Graphic/F/C/2/8/r8YDvKllBEKFKRN4gmur4w.jpg?v=20201217153803135",
-        "username": "Dinu",
-        "sport": "Basketball",
-        "postdate": "1/1/2022"
+        "imgsrc": "https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_TableTennis_image1600w.jpg",
+        "sport": "Table Tennis",
+        "eventdate": "1/1/2022"
     },
     {
         "id": 3,
-        "title": "Centizu",
+        "title": "Badminton doubles",
         "text": "Aenean ipsum neque, tincidunt eu est nec, sodales pellentesque leo. Morbi facilisis cursus felis, in hendrerit sapien dapibus vel. Fusce tortor lacus, convallis ut sapien vitae, viverra dignissim elit. Phasellus ac lacus at neque varius ultricies sed quis neque. Morbi imperdiet imperdiet libero, vel efficitur elit dapibus quis. Cras eget lobortis nulla, at efficitur felis. Nulla eu justo mattis, placerat purus nec, pulvinar augue. Nunc feugiat placerat nunc. Cras sodales sem et est porttitor, nec eleifend nisi imperdiet. Nunc mi quam, condimentum sollicitudin orci a, faucibus placerat nibh. Vestibulum tempus eleifend sapien cursus egestas.",
-        "imgsrc": "https://picsum.photos/947/300",
-        "username": "Augustin",
-        "sport": "Volleyball",
-        "postdate": "1/1/2022"
+        "imgsrc": "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/603e119816d64d6449d7cf13_the-landing.jpeg",
+        "sport": "Badminton",
+        "eventdate": "1/1/2022"
     },
     {
         "id": 4,
         "title": "Dynabox",
         "text": "Vestibulum vestibulum mattis consectetur. Vivamus in quam enim. Curabitur vehicula sem sit amet tincidunt cursus. Morbi mattis nibh sem, sit amet pulvinar neque posuere ut. Morbi ut leo commodo, feugiat nibh ac, malesuada justo. Ut tellus felis, aliquam eget dictum id, porta eget metus. Praesent ut justo nec odio convallis fermentum in et felis. Suspendisse volutpat, quam et suscipit facilisis, lorem lectus efficitur quam, a luctus sem diam non arcu. Phasellus nunc purus, gravida sagittis vehicula ac, facilisis eget nisl. Nulla neque sapien, aliquam quis erat id, pulvinar ultrices turpis. Vestibulum volutpat ex orci, in blandit odio sodales at. Integer non cursus magna. Donec eget tortor semper, aliquam magna vitae, placerat lorem. Nullam luctus mi non rutrum volutpat. Duis arcu risus, facilisis sed ultrices varius, volutpat egestas justo.",
-        "username": "Mircea",
+        "imgsrc": "https://picsum.photos/997/300",
         "sport": "Table tennis",
-        "postdate": "1/1/2022"
+        "eventdate": "1/1/2022"
     },
     {
         "id": 5,
         "title": "Avaveo",
         "text": "Ut varius augue mauris, vitae aliquam justo commodo vitae. Integer aliquam aliquet risus ut tempus. Donec in ligula eget felis efficitur bibendum. Sed tincidunt massa id risus blandit suscipit. Fusce egestas, neque a cursus viverra, sapien justo pulvinar mauris, non mattis ligula felis a nibh. Vivamus ac metus commodo, fermentum ipsum vitae, tempor sapien. Nullam id sapien libero. Nulla urna lacus, pulvinar in finibus eget, egestas nec tortor.",
-        "username": "Vlad",
+        "imgsrc": "https://picsum.photos/998/300",
         "sport": "Running",
-        "postdate": "1/1/2022"
+        "eventdate": "1/1/2022"
     }
 ]

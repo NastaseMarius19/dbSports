@@ -66,7 +66,7 @@ const Form = () => {
             </div>
             <div className="buttons">
               <div className="loginButton">
-                <button type="submit" 
+                <button className="btn btn-post" type="submit" 
                   >Login</button>
               </div>
               <p>Don't have an account? Register here!</p>

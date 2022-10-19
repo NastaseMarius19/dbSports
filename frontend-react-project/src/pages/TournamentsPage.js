@@ -1,38 +1,31 @@
-import Sportlist from "../components/sportlist/Sportlist";
+import Tournaments from "../components/tournaments/Tournaments";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 import NavbarTournamentsPage from "../components/navbars/NavbarTournamentsPage";
 import DbSports from "../components/logos/DbSports";
+import { LoginContext } from "../components/Context/LoginContext";
+import { React, useState, useContext } from "react";
 
 function TournamentsPage() {
+  const { email } = useContext(LoginContext);
+  const [inputText, setInputText] = useState("");
+  let inputHandler = (e) => {
+    //convert input text to lower case
+    var lowerCase = e.target.value.toLowerCase();
+    setInputText(lowerCase);
+  };
   return (
     <div>
-      <nav>
-        <div className="dbsportsNav">
-          <div className="dbsportsNav-content">
-            <div class="container">
-              <input type="search" placeholder="Search" class="search-field" />
-              <button type="submit" class="search-button">
-                <img
-                  src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
-                  alt="mglass"
-                />
-              </button>
-            </div>
-            <div className="main-nav">
-              <NavbarTournamentsPage />
-            </div>
+      <NavbarTournamentsPage />
+
+      <div className="mt-5">
+        <div className="row">
+          <div className="col-9 mt-1">
+            <Tournaments />
           </div>
-          <div className="logo">
-            <DbSports />
+          <div className="col-3 mt-0">
+            <Subscriptions />
+            <h2>Email: {email} </h2>
           </div>
-        </div>
-      </nav>
-      <div className="main-comp">
-        <div className="main-list">
-          <Sportlist />
-        </div>
-        <div className="main-subscriptions">
-          <Subscriptions />
         </div>
       </div>
     </div>

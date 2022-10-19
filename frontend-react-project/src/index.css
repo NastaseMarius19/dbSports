@@ -86,6 +86,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -100,19 +101,23 @@ nav,
 section {
   display: block;
 }
+
 body {
   line-height: 1;
   align-items: center;
   text-align: center;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -120,6 +125,7 @@ q:after {
   content: "";
   content: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -191,7 +197,7 @@ label {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
+
 }
 
 .sticky {
@@ -221,12 +227,28 @@ label {
   flex-grow: 0;
 }
 
+.navbar {
+  flex-direction: row-reverse;
+}
+
 .passwordInput {
   color: #52525c;
   flex: none;
   order: 0;
   align-self: stretch;
   flex-grow: 0;
+}
+
+h2 {
+  color: black;
+}
+
+.subs2 .btn {
+  background: #0079d3;
+}
+
+.subs2 {
+  background-color: #f8f9fa;
 }
 
 .btn {
@@ -258,10 +280,12 @@ label {
   flex-direction: column;
   flex-shrink: 0;
 }
+
 .loginButton {
   box-sizing: border-box;
   padding: 30px 50px;
 }
+
 .btn-login {
   box-sizing: border-box;
   padding: 10%;
@@ -280,11 +304,11 @@ label {
   background-color: #0018a8;
   border-radius: 6px;
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
@@ -295,7 +319,63 @@ label {
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
-  transition: all .2s,box-shadow .08s ease-in;
+  transition: all .2s, box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.btn-post-logo {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #0018a8;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s, box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+}
+
+.btn-post-logo {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #0018a8;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s, box-shadow .08s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -310,6 +390,10 @@ label {
   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
+.btnsize {
+  width: 100px;
+
+}
 
 .searchbar {
   background-color: #4563ff;
@@ -334,19 +418,19 @@ label {
   text-transform: capitalize;
 }
 
-/* .cardcontent {
+.cardcontent {
   justify-content: space-evenly;
   flex-direction: column;
   background: #F1F3FF;
   display: flex;
-} */
+}
 
 .modal {
   display: flex;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   background-color: white;
-  padding: 1rem;
+  padding: 3rem;
   text-align: center;
   width: 20rem;
   height: 5rem;
@@ -357,6 +441,7 @@ label {
   flex-direction: column;
   justify-content: space-around;
 }
+
 
 .modal2 {
   display: flex;
@@ -403,12 +488,16 @@ div.modal {
 }
 
 .subs {
+  margin-top: 30px;
   display: flex;
   background-color: #0018a8;
   border: 1px;
   flex-direction: column;
   height: 768px;
   width: 100%;
+  border-radius: 40px;
+  padding: 10px;
+  align-items: center;
 }
 
 .subs-text {
@@ -445,19 +534,12 @@ div.modal {
 }
 
 
-.subs {
-  border-radius: 40px;
-  padding: 10px;
-  align-items: center;
-}
 
 /* .search-img {
   width: 30px;
   height: 30px;
 } */
-.container {
-  width: 50%;
-}
+
 
 .search-field {
   width: 100%;
@@ -479,6 +561,7 @@ div.modal {
   height: 20px;
   object-fit: cover;
 }
+
 .main-page-buttons {
   display: flex;
   width: 400px;
@@ -522,22 +605,25 @@ div.modal {
   transform: translate(-50%, -50%);
 }
 
-.rform{
+.rform {
   position: absolute;
   left: 50%;
   top: 65%;
   transform: translate(-50%, -50%);
 }
 
-.main-nav {
-  position: sticky;
-  top: 1px;
+.rform {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
+
 .dbsportsNav-content {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
- padding-bottom: 100px;
+  padding-bottom: 100px;
 
 }
 
@@ -547,3 +633,20 @@ div.modal {
   margin: 20px;
 }
 
+.main-list {
+  width: 100%;
+}
+
+.row {
+  width: 99%;
+}
+
+.btn-create {
+  margin: 10px;
+  width: 200px;
+}
+
+.form-create {
+  width: 200px;
+  margin: 10px;
+}

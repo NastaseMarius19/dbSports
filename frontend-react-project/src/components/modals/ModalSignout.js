@@ -12,9 +12,9 @@ function ModalSignout(props) {
       </div>
       <div className="modalButtons">
         <div>
-        <button className="btn btn-post" onClick={cancelHandler}>
-          Cancel
-        </button>
+          <button className="btn btn-post" onClick={cancelHandler}>
+            Cancel
+          </button>
         </div>
         <SignoutButton />
       </div>
