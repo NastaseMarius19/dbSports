@@ -10,11 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -29,7 +28,17 @@ public class TeamController {
         this.userService = userService;
     }
 
+    @GetMapping("/get-teams")
+    @CrossOrigin(origins = "http://localhost:3000")
+    public ResponseEntity getTeams(){
+        System.out.println("denis");
+        List<TeamDTO> teamDTOS = teamService.findAllTeams();
+        return ResponseEntity.ok().body(teamDTOS);
+    }
+
     @PostMapping("/add-team")
+    @CrossOrigin(origins = "http://localhost:3000")
+
     public ResponseEntity addTeam(@RequestBody TeamDTO teamDTO) {
         Set<User> usersList = new HashSet<>();
         if(teamDTO.getUsersEmails().size() == 0) {
@@ -46,6 +55,7 @@ public class TeamController {
     }
 
     @PostMapping("/add-user")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity addUser(@RequestBody TeamAuxDTO teamDTO) {
         String email = teamDTO.getEmail();
         String nameTeam = teamDTO.getName();

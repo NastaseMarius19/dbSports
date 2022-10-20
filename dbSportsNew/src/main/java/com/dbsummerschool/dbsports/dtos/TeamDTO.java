@@ -1,10 +1,12 @@
 package com.dbsummerschool.dbsports.dtos;
 
 import com.dbsummerschool.dbsports.model.User;
+import lombok.Builder;
 
 import java.util.List;
 import java.util.Set;
 
+@Builder
 public class TeamDTO {
 
     private String name;
