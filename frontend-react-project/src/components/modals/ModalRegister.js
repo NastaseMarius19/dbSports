@@ -3,6 +3,7 @@ import axios from "axios";
 
 import { useState } from "react";
 import CodeSubmitButton from "../buttons/CodeSubmitButton";
+import { useNavigate } from "react-router-dom";
 
 function ModalRegister(props) {
   function RcancelHandler() {
@@ -22,6 +23,11 @@ function ModalRegister(props) {
     }
   }
 
+  const navigate = useNavigate();
+  function handleClick() {
+    navigate("/")
+  }
+
   return (
     <div className="modal2">
       <div className="modalButtons">
@@ -38,14 +44,14 @@ function ModalRegister(props) {
             placeholder="Enter the code"
             className="formInput"
             onChange={(event) => {
-                setCode(event.target.value);
-              }}
+              setCode(event.target.value);
+            }}
           />
         </div>
       </div>
       <div className="modalButtons">
         <div>
-          <CodeSubmitButton onClick={handleSubmit}/>
+          <CodeSubmitButton onClick={handleSubmit} />
         </div>
         <div>
           <button className="btn btn-post" onClick={RcancelHandler}>

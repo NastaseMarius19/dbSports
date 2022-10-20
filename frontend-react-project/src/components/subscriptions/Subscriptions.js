@@ -24,6 +24,12 @@ function Subscriptions() {
         <div className="sport-div">
           <SubscriptionsButton text="#basketball" />
         </div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#marathon" />
+        </div>
+        <div className="sport-div">
+          <SubscriptionsButton text="#tennis" />
+        </div>
       </div>
     </div>
   );
