@@ -13,12 +13,20 @@ import axios from 'axios';
 
 
 function TextField(props) {
-  const { email } = useContext(LoginContext);
+  const { email,name } = useContext(LoginContext);
   const [title, setTitle] = useState('');
   const [description, setText] = useState('');
   const [timeOfPost, setTimeOfPost] = useState('');
   const [sportName, setSportName] = useState('');
   const [picture, setPhoto] = useState();
+
+  function formatDate() {
+    let date = new Date();
+    const day = date.toLocaleString('default', { day: '2-digit' });
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.toLocaleString('default', { year: 'numeric' });
+    return day + '-' + month + '-' + year;
+  }
 
   async function handleSubmit(event){
     console.log(email);
@@ -36,7 +44,9 @@ function TextField(props) {
           sportName: sportName,
           timeOfPost: timeOfPost,
           description: description,
-          picture: []
+          picture: [],
+          nameUser:name,
+          timeOfPost:formatDate()
         });
     }
     catch(err){
