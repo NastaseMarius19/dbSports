@@ -210,13 +210,14 @@ label {
   background: #ffffff;
   border: 2px solid #5470ff;
   border-radius: 8px;
-
-  width: 160px;
+  text-align: left;
+  width: 218px;
   height: 48px;
 }
 
 .form-group1 {
   padding: 30px 50px;
+  text-align: left;
 }
 
 .nameInput {
@@ -231,7 +232,13 @@ label {
   flex-direction: row-reverse;
 }
 
-.passwordInput {
+.navbar-orix {
+  display: flex;
+  align-items: center;
+}
+
+
+.navbar-brand .passwordInput {
   color: #52525c;
   flex: none;
   order: 0;
@@ -528,7 +535,7 @@ div.modal {
 
 .main-comp {
   display: grid;
-  grid-template-columns: 86% 11%;
+  grid-template-columns: 100% 11%;
   overflow: hidden;
   width: 100%;
 }

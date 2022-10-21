@@ -3,7 +3,10 @@ import Sportlist from "../components/sportlist/Sportlist";
 import Subscriptions from "../components/subscriptions/Subscriptions";
 import { React, useState, useContext } from "react";
 import DbSports from "../components/logos/DbSports";
-
+import PostButton from "../components/buttons/PostButton";
+import UsernameButton from "../components/buttons/UsernameButton";
+import SwitchPageButton from "../components/buttons/SwitchPageButton";
+import LogoButton from "../components/buttons/LogoButton";
 import { LoginContext } from "../components/Context/LoginContext";
 
 
@@ -17,9 +20,42 @@ function MainPage() {
   };
   return (
     <div>
-      
-      <NavbarMainPage />
-      
+
+      <nav className="navbar navbar-expand-lg navbar-light bg-light py-0 fixed-top p-3">
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navLinks"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navLinks">
+          <div class="container">
+            <input type="search" placeholder="Search" class="search-field" onChange={inputHandler} />
+            <button type="submit" class="search-button">
+              <img
+                src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
+                alt="mglass"
+              />
+            </button>
+            {/* </form> */}
+          </div>
+          <div className="ml-3">
+            <PostButton />
+          </div>
+          <div className="ml-3">
+            <SwitchPageButton navigation="/tournaments" text="Tournaments" />
+          </div>
+          <div className="ml-3">
+            <UsernameButton />
+          </div>
+          <div className="logo ml-3">
+            <LogoButton />
+          </div>
+        </div>
+      </nav>
+
       <div className="mt-5">
         <div className="row">
           <div className="col-9 mt-1">

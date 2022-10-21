@@ -13,38 +13,51 @@ import axios from 'axios';
 
 
 function TextField(props) {
-  const { email } = useContext(LoginContext);
+  const { email, name } = useContext(LoginContext);
   const [title, setTitle] = useState('');
   const [description, setText] = useState('');
   const [timeOfPost, setTimeOfPost] = useState('');
   const [sportName, setSportName] = useState('');
   const [picture, setPhoto] = useState();
 
-  async function handleSubmit(event){
+  function formatDate() {
+    let date = new Date();
+    const day = date.toLocaleString('default', { day: '2-digit' });
+    const month = date.toLocaleString('default', { month: 'short' });
+    const year = date.toLocaleString('default', { year: 'numeric' });
+    return day + '-' + month + '-' + year;
+  }
+
+  async function handleSubmit(event) {
     console.log(email);
     console.log(title);
     console.log(description);
     console.log(sportName);
     console.log(picture);
     event.preventDefault();
-    
+
     try {
       await axios.post("http://localhost:8080/announcements/add-announcement",
         {
-          title:title,
-          email:email,
+          title: title,
+          email: email,
           sportName: sportName,
           timeOfPost: timeOfPost,
           description: description,
-          picture: []
+          picture: [],
+          nameUser: name,
+          timeOfPost: formatDate()
         });
     }
-    catch(err){
+    catch (err) {
       console.log(err);
     }
-    
+
   }
 
+  const handleClick = () => {
+    alert("Congrats you just posted!")
+  }
 
   return (
     <div>
@@ -91,11 +104,10 @@ function TextField(props) {
                 setPhoto={setPhoto}
               />
 
-              <Textarea className="textfield" size="sm"
-                 />
+
 
               <div>
-                <button type="submit" className="btn btn-post btnsize">
+                <button type="submit" onClick={handleClick} className="btn btn-post btnsize">
                   Post
                 </button>
               </div>

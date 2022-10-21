@@ -13,6 +13,9 @@ import {
 
   
 const PostChoiceButton = (props) => {
+    React.useEffect(()=>{
+      props.setSportName("Football");
+    },[])
     function choose(e) {
      {
         props.setSportName(e.target.value);
@@ -20,10 +23,10 @@ const PostChoiceButton = (props) => {
     }
     return (
         <select onChange={choose} value={props.value}>
-          <option >Football</option>
-          <option >Tennis Table</option>
-          <option >Tennis</option>
-          <option>Golf</option>
+          <option value="Football">Football</option>
+          <option value="Tennis Table">Tennis Table</option>
+          <option value="Tennis">Tennis</option>
+          <option value="Golf">Golf</option>
         </select>
      
     

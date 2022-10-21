@@ -31,17 +31,26 @@ public class AnnouncementController {
     }
 
     @PostMapping("/add-announcement")
+    @CrossOrigin(origins = "http://localhost:3000")
     public ResponseEntity addAnnouncement(@RequestBody AnnouncementDTO announcementDTO) throws ParseException {
+        System.out.println(announcementDTO);
         Sport sport = sportService.getSportsByName(announcementDTO.getSportName()).get(0);
         announcementService.addAnnouncement(announcementDTO, sport);
+        System.out.println(announcementDTO);
         return ResponseEntity.status(HttpStatus.CREATED).body("Posted!");
     }
 
-    @GetMapping("/{nameSport}")
-    @ResponseBody
-    public List<Announcement> getAnnouncementsBySport(@PathVariable(name = "nameSport") String nameSport) {
-        Sport sport = sportService.getSportsByName(nameSport).get(0);
-        return announcementService.getAllBySport(sport);
+//    @GetMapping("/{nameSport}")
+//    @ResponseBody
+//    public List<Announcement> getAnnouncementsBySport(@PathVariable(name = "nameSport") String nameSport) {
+//        Sport sport = sportService.getSportsByName(nameSport).get(0);
+//        return announcementService.getAllBySport(sport);
+//    }
+    @GetMapping("/get-all")
+    @CrossOrigin(origins = "http://localhost:3000")
+
+    public ResponseEntity getAnnouncementsBySport() {
+        return ResponseEntity.ok().body(announcementService.findAll());
     }
 
     @GetMapping("/filtrate-by/{email}")

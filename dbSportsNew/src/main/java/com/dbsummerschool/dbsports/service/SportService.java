@@ -23,6 +23,10 @@ public class SportService {
     public List<Sport> getSportsByName(String name) {
         return sportRepository.findSportByName(name);
     }
-
+    public Sport addSport(String sportName){
+        Sport sport = new Sport();
+        sport.setName(sportName);
+        return sportRepository.save(sport);
+    }
 
 }

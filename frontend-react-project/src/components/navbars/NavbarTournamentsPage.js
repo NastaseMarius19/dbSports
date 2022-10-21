@@ -26,13 +26,13 @@ const NavbarTournamentsPage = () => {
             />
           </button>
         </div>
-        <div>
+        <div className="ml-3">
           <SwitchPageButton text="Announcements" navigation="/mainpage" />
         </div>
-        <div>
+        <div className="ml-3">
           <UsernameButton />
         </div>
-        <div className="logo">
+        <div className="logo ml-3">
           <LogoButton />
         </div>
       </div>

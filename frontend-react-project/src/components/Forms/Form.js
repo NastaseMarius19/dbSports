@@ -22,7 +22,7 @@ const Form = () => {
         {
           email:email,
           password:password,
-        });
+        }).then((res)=>context.setName(res.data.name))
         navigate("/mainpage");
         context.setEmail(email);
         setEmail('');

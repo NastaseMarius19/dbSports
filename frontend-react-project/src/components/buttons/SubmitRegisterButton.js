@@ -15,6 +15,7 @@ function SubmitRegisterButton(props) {
     setRModalIsOpen(true);
   }
 
+
   return (
     <div>
       <div>

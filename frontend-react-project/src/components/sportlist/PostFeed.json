@@ -1,45 +1,29 @@
 [
     {
         "id": 1,
-        "title": "Sportul Rege",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at est ex. Nam vehicula gravida turpis, vulputate condimentum tellus vehicula et. Ut elementum est nec ante malesuada dignissim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer nec est et mi interdum accumsan vitae id ipsum. Nunc nec ullamcorper ante. Praesent sit amet lacinia mauris. Sed cursus eget lacus quis ultricies. Sed luctus interdum consectetur. Duis blandit, dolor hendrerit consectetur gravida, turpis orci condimentum risus, sed malesuada elit nisl in libero. Proin diam enim, dictum ut enim et, laoreet hendrerit arcu. Vestibulum ac venenatis metus, eget cursus nulla. Aliquam nec placerat mi. Suspendisse vel ligula eu augue congue commodo. Vivamus auctor ante sit amet nunc ultricies porta. Morbi suscipit neque in mauris molestie venenatis.",
-        "imgsrc": "https://www.pontul-zilei.com/wp-content/uploads/2020/01/Tot-ce-trebuie-sa-stii-despre-fotbal.jpg",
-        "username": "Alex",
-        "sport": "Football",
-        "postdate": "1/1/2022"
+        "title": "It’s a marathon, not a sprint",
+        "text": "When we’re not programming, we’re running with Hope and Homes for Children Romania :) #dblife #teamhope #bex #makingworkfun",
+        "imgsrc": "https://media-exp1.licdn.com/dms/image/C4D22AQFHM9T-ph3L-g/feedshare-shrink_800/0/1665218453401?e=1669248000&v=beta&t=ecVQY6-ERwC3CYpMsYJaST5p-yrCl2y0WcXHZjr4tho",
+        "username": "DB Team",
+        "sport": "Marathon",
+        "postdate": "9/10/2022"
     },
     {
         "id": 2,
-        "title": "Basketball is everywhere",
-        "text": "Nulla sit amet felis id leo vestibulum dictum non eu augue. Sed tincidunt sem sed nulla facilisis volutpat. Maecenas dignissim pulvinar nisl vitae fermentum. Vivamus dolor urna, porta tempor arcu in, lacinia lacinia eros. Vestibulum a lacinia ligula, in placerat orci. Etiam quis diam sit amet dui ultrices pharetra. Curabitur justo libero, placerat non lobortis non, sagittis sit amet elit. Etiam mattis magna id eleifend tincidunt. Proin sollicitudin, felis ac sodales placerat, turpis lorem efficitur dui, sit amet consectetur sem enim id risus. Sed tincidunt nisi id tellus lobortis, at efficitur mi rhoncus. Aenean mattis libero ac sapien accumsan, a pharetra leo eleifend. Fusce non enim lectus. Sed eget magna nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse eleifend euismod rhoncus.",
-        "imgsrc": "https://www.fiba.basketball/images.fiba.com/Graphic/F/C/2/8/r8YDvKllBEKFKRN4gmur4w.jpg?v=20201217153803135",
-        "username": "Dinu",
-        "sport": "Basketball",
-        "postdate": "1/1/2022"
+        "title": "Retragerea GOAT-ului",
+        "text": "Roger Federer s-a retras din tenis, într-o atmosferă încărcată de emoție, dar elvețianul nu va sta mult departe de tenis. FedEx a anunțat că intenționează să organizeze un turneu demonstrativ în următoarea jumătate de an, la care să participe jucători invitați de el.La conferința de presă de după ultimul meci al carierei, Federer a anunțat că are în vedere un proiect special, care ar trebui să se materializeze în următoarea jumătate de an. Văzând cât de mulți fani au fost prezenți la Londra, elvețianul se gândește serios să organizeze un turneu demonstrativ, probabil în primăvară, banii strânși urmând a fi probabil donați pentru cauze nobile.'Mi-ar plăcea să organizez un turneu demonstrativ, cu jucători pe care îi aleg eu, în următoarele 6 luni. Tenisul mi-a dat totul și nu vreau să plec de lângă el', a spus Federer, după retragere.",
+        "imgsrc": "https://media.hotnews.ro/media_server1/image-2021-05-18-24804331-41-roger-federer.jpg",
+        "username": "Alex",
+        "sport": "Tennis",
+        "postdate": "10/10/2022"
     },
     {
         "id": 3,
-        "title": "Centizu",
-        "text": "Aenean ipsum neque, tincidunt eu est nec, sodales pellentesque leo. Morbi facilisis cursus felis, in hendrerit sapien dapibus vel. Fusce tortor lacus, convallis ut sapien vitae, viverra dignissim elit. Phasellus ac lacus at neque varius ultricies sed quis neque. Morbi imperdiet imperdiet libero, vel efficitur elit dapibus quis. Cras eget lobortis nulla, at efficitur felis. Nulla eu justo mattis, placerat purus nec, pulvinar augue. Nunc feugiat placerat nunc. Cras sodales sem et est porttitor, nec eleifend nisi imperdiet. Nunc mi quam, condimentum sollicitudin orci a, faucibus placerat nibh. Vestibulum tempus eleifend sapien cursus egestas.",
-        "imgsrc": "https://picsum.photos/947/300",
+        "title": "S-a dat starul Campionatului Mondial de baschet U23 3X3! România este gazda competiției.",
+        "text": "Cele mai bune 40 de echipe naționale U23 de baschet 3×3 participă în perioada 5-9 octombrie la Campionatul Mondial, care este găzduit de către București. Toate meciurile se vor juca în incita Circului Metropolitan, iar printre formații se numără și reprezentativele României.Cel mai mare eveniment sportiv găzduit de către România în această toamnă, dar și primul Campionat Mondial de baschet din țară, a fost prefațat de către o conferință de presă, la care au fost invitați Carmen Tocală, președintele Federației Române de Baschet, dar și Nicușor Dan, edilul Capitalei.",
+        "imgsrc": "https://www.prosport.ro/wp-content/uploads/2022/08/baschet-mall-bucuresti4.-jpg-scaled.jpg",
         "username": "Augustin",
-        "sport": "Volleyball",
-        "postdate": "1/1/2022"
-    },
-    {
-        "id": 4,
-        "title": "Dynabox",
-        "text": "Vestibulum vestibulum mattis consectetur. Vivamus in quam enim. Curabitur vehicula sem sit amet tincidunt cursus. Morbi mattis nibh sem, sit amet pulvinar neque posuere ut. Morbi ut leo commodo, feugiat nibh ac, malesuada justo. Ut tellus felis, aliquam eget dictum id, porta eget metus. Praesent ut justo nec odio convallis fermentum in et felis. Suspendisse volutpat, quam et suscipit facilisis, lorem lectus efficitur quam, a luctus sem diam non arcu. Phasellus nunc purus, gravida sagittis vehicula ac, facilisis eget nisl. Nulla neque sapien, aliquam quis erat id, pulvinar ultrices turpis. Vestibulum volutpat ex orci, in blandit odio sodales at. Integer non cursus magna. Donec eget tortor semper, aliquam magna vitae, placerat lorem. Nullam luctus mi non rutrum volutpat. Duis arcu risus, facilisis sed ultrices varius, volutpat egestas justo.",
-        "username": "Mircea",
-        "sport": "Table tennis",
-        "postdate": "1/1/2022"
-    },
-    {
-        "id": 5,
-        "title": "Avaveo",
-        "text": "Ut varius augue mauris, vitae aliquam justo commodo vitae. Integer aliquam aliquet risus ut tempus. Donec in ligula eget felis efficitur bibendum. Sed tincidunt massa id risus blandit suscipit. Fusce egestas, neque a cursus viverra, sapien justo pulvinar mauris, non mattis ligula felis a nibh. Vivamus ac metus commodo, fermentum ipsum vitae, tempor sapien. Nullam id sapien libero. Nulla urna lacus, pulvinar in finibus eget, egestas nec tortor.",
-        "username": "Vlad",
-        "sport": "Running",
-        "postdate": "1/1/2022"
+        "sport": "Basketball",
+        "postdate": "12/10/2022"
     }
 ]

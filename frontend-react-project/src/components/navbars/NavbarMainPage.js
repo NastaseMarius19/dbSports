@@ -19,7 +19,7 @@ const NavbarMainPage = () => {
       </button>
       <div className="collapse navbar-collapse" id="navLinks">
         <div class="container">
-        <input type="search" placeholder="Search" class="search-field" />
+          <input type="search" placeholder="Search" class="search-field" />
           <button type="submit" class="search-button">
             <img
               src="https://wiki.geogebra.org/uploads/thumb/8/88/Menu-button-open-search.svg/480px-Menu-button-open-search.svg.png"
@@ -28,16 +28,16 @@ const NavbarMainPage = () => {
           </button>
           {/* </form> */}
         </div>
-        <div>
+        <div className="ml-3">
           <PostButton />
         </div>
-        <div>
+        <div className="ml-3">
           <SwitchPageButton navigation="/tournaments" text="Tournaments" />
         </div>
-        <div>
+        <div className="ml-3">
           <UsernameButton />
         </div>
-        <div className="logo">
+        <div className="logo ml-3">
           <LogoButton />
         </div>
       </div>

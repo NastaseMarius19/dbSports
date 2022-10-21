@@ -12,10 +12,12 @@ import TournamentsPage from './pages/TournamentsPage';
 import { LoginContext } from './components/Context/LoginContext'
 function App() {
   const [email, setEmail] = useState('');
+  const [name,setName] = useState('')
   console.log(email);
+  console.log(name)
   return (
     <React.StrictMode>
-      <LoginContext.Provider value={{ email, setEmail }}>
+      <LoginContext.Provider value={{ email, setEmail, name, setName }}>
         <BrowserRouter>
           <Routes>
             {email == '' && <Route path="/" element={<Login />} />}

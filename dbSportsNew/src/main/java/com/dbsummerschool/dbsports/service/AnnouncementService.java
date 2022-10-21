@@ -34,6 +34,9 @@ public class AnnouncementService {
         announcement.setSport(sport);
         return announcementRepository.save(announcement);
     }
+    public List<Announcement> findAll(){
+        return announcementRepository.findAll();
+    }
 
     public List<Announcement> getAllBySport(Sport sport) {
         return announcementRepository.getAllBySport(sport);
