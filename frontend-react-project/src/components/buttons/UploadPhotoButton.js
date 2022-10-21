@@ -5,30 +5,36 @@ const UploadPhotoButton = (props) => {
     const file = e.target.files[0];
 
     return new Promise((resolve, reject) => {
-        const reader = new FileReader();
+      const reader = new FileReader();
 
-        reader.onload = (event) => {
-            resolve(event.target.result);
-        };
+      reader.onload = (event) => {
+        resolve(event.target.result);
+      };
 
-        reader.onerror = (err) => {
-            reject(err);
-        };
-        return reader.readAsDataURL(file);
+      reader.onerror = (err) => {
+        reject(err);
+      };
+      return reader.readAsDataURL(file);
     });
   }
-  return ( 
+  return (
     <div>
       {props.value && (
         <div>
-        <img alt="not found" width={"250px"} src={URL.createObjectURL(props.value)} />
-        <br />
-        <button className="btn btn-post" onClick={()=>props.setPhoto(null)}>Remove</button>
+          <img
+            alt="not found"
+            width={"250px"}
+            src={URL.createObjectURL(props.value)}
+          />
+          <br />
+          <button className="btn btn-post" onClick={() => props.setPhoto(null)}>
+            Remove
+          </button>
         </div>
       )}
       <br />
-     
-      <br /> 
+
+      <br />
       <input
         type="file"
         name="myImage"

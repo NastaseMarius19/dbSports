@@ -7,9 +7,12 @@ const BackToLoginButton = () => {
 
   return (
     <div>
-      <button onClick={() => {
-        navigate("/")}
-        } className="btn btn-post">
+      <button
+        onClick={() => {
+          navigate("/");
+        }}
+        className="btn btn-post"
+      >
         Back to login
       </button>
     </div>

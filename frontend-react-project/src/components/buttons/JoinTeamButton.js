@@ -13,7 +13,9 @@ const JoinTeamButton = (props) => {
   return (
     <div>
       <div>
-        <button className="btn btn-post" onClick={joinHandler}>Join a Team</button>
+        <button className="btn btn-post" onClick={joinHandler}>
+          Join a Team
+        </button>
       </div>
       {modalIsOpen && <ModalJoinATeam onCancel={closeModalHandler} />}
     </div>

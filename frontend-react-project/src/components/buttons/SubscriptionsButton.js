@@ -9,7 +9,7 @@ function SubscriptionsButton(props) {
   };
 
   return (
-    <div >
+    <div>
       <div className="row">
         <div className="col-7 pb-3">
           <button className="btn button-danger">{props.text}</button>

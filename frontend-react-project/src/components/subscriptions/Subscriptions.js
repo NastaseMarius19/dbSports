@@ -11,7 +11,9 @@ function Subscriptions() {
   return (
     <div className="card mt-5 subs2">
       <div className="card-body">
-        <div className="card-title"><h2>Subscriptions</h2></div>
+        <div className="card-title">
+          <h2>Subscriptions</h2>
+        </div>
         <div className="sport-div">
           <SubscriptionsButton text="#football" />
         </div>

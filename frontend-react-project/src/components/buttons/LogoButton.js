@@ -1,10 +1,10 @@
-import React from 'react'
-import DbSports from '../logos/DbSports';
+import React from "react";
+import DbSports from "../logos/DbSports";
 
 function LogoButton() {
-  function refreshPage(){
+  function refreshPage() {
     window.location.reload();
-}
+  }
   return (
     <div>
       <button
@@ -18,4 +18,4 @@ function LogoButton() {
   );
 }
 
-export default LogoButton
+export default LogoButton;

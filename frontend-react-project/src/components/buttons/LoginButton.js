@@ -4,10 +4,14 @@ const LoginButton = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <button onClick={() => {
-        navigate("/mainpage");
-      }} 
-        className="btn btn-login">Login</button>
+      <button
+        onClick={() => {
+          navigate("/mainpage");
+        }}
+        className="btn btn-login"
+      >
+        Login
+      </button>
     </div>
   );
 };

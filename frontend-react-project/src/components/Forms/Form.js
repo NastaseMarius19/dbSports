@@ -2,36 +2,31 @@ import React, { useState, useContext } from "react";
 import RegisterButton from "../buttons/RegisterButton";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import {LoginContext} from '../Context/LoginContext'
-
-
-
+import { LoginContext } from "../Context/LoginContext";
 
 const Form = () => {
   const context = useContext(LoginContext);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  
-  async function handleSubmit(event){
+  async function handleSubmit(event) {
     event.preventDefault();
-    
+
     try {
-      await axios.post("http://localhost:8080/users/login",
-        {
-          email:email,
-          password:password,
-        }).then((res)=>context.setName(res.data.name))
-        navigate("/mainpage");
-        context.setEmail(email);
-        setEmail('');
-        setPassword('');
-    }
-    catch(err){
+      await axios
+        .post("http://localhost:8080/users/login", {
+          email: email,
+          password: password,
+        })
+        .then((res) => context.setName(res.data.name));
+      navigate("/mainpage");
+      context.setEmail(email);
+      setEmail("");
+      setPassword("");
+    } catch (err) {
       console.log(err);
     }
-    
   }
 
   return (
@@ -66,8 +61,9 @@ const Form = () => {
             </div>
             <div className="buttons">
               <div className="loginButton">
-                <button className="btn btn-post" type="submit" 
-                  >Login</button>
+                <button className="btn btn-post" type="submit">
+                  Login
+                </button>
               </div>
               <p>Don't have an account? Register here!</p>
               <div className="loginButton">
@@ -81,7 +77,4 @@ const Form = () => {
   );
 };
 
-
-
 export default Form;
-

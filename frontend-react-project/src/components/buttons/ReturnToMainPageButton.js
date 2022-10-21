@@ -6,10 +6,9 @@ const ReturnToMainPageButton = () => {
 
   return (
     <div>
-      <button
-        onClick={() => navigate("/mainpage")}
-        className="btn btn-post"
-      >        Return to main page
+      <button onClick={() => navigate("/mainpage")} className="btn btn-post">
+        {" "}
+        Return to main page
       </button>
     </div>
   );

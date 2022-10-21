@@ -6,10 +6,7 @@ const RegisterButton = () => {
 
   return (
     <div>
-      <button
-        onClick={() => navigate("/register")}
-        className="btn btn-post"
-      >
+      <button onClick={() => navigate("/register")} className="btn btn-post">
         Register
       </button>
     </div>

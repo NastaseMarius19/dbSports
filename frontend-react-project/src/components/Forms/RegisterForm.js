@@ -5,35 +5,31 @@ import { useState } from "react";
 import BackToLoginButton from "../buttons/BackToLoginButton";
 
 const RegisterForm = () => {
-  const [firstname, setName] = useState('');
-  const [lastname, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [firstname, setName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   //const [repeatpassword, setRepeatPassword] = useState('');
-
 
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:8080/users/register",
-        {
-          name: firstname,
-          surname: lastname,
-          email: email,
-          password: password,
+      await axios.post("http://localhost:8080/users/register", {
+        name: firstname,
+        surname: lastname,
+        email: email,
+        password: password,
 
-          //repeatpassword: repeatpassword
-        });
-      setName('');
-      setLastName('');
-      setEmail('');
-      setPassword('');
+        //repeatpassword: repeatpassword
+      });
+      setName("");
+      setLastName("");
+      setEmail("");
+      setPassword("");
       //setRepeatPassword('');
-    }
-    catch (err) {
+    } catch (err) {
       alert("Registration failed");
     }
-
   }
 
   return (
@@ -51,7 +47,6 @@ const RegisterForm = () => {
                 required
                 onChange={(event) => {
                   setName(event.target.value);
-
                 }}
               />
             </div>
@@ -98,9 +93,9 @@ const RegisterForm = () => {
                 placeholder="Repeat password"
                 className="formInput"
                 required
-              // onChange={(event) => {
-              //   setRepeatPassword(event.target.value);
-              // }}
+                // onChange={(event) => {
+                //   setRepeatPassword(event.target.value);
+                // }}
               />
             </div>
             <div className="buttons">

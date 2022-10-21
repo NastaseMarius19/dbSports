@@ -176,7 +176,6 @@ label {
   background-color: white;
 }
 
-
 .dblogo {
   height: 152px;
   object-fit: cover;
@@ -197,7 +196,6 @@ label {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-
 }
 
 .sticky {
@@ -236,7 +234,6 @@ label {
   display: flex;
   align-items: center;
 }
-
 
 .navbar-brand .passwordInput {
   color: #52525c;
@@ -311,11 +308,13 @@ h2 {
   background-color: #0018a8;
   border-radius: 6px;
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
@@ -326,7 +325,7 @@ h2 {
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
-  transition: all .2s, box-shadow .08s ease-in;
+  transition: all 0.2s, box-shadow 0.08s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -339,11 +338,13 @@ h2 {
   background-color: #0018a8;
   border-radius: 6px;
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
@@ -354,7 +355,7 @@ h2 {
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
-  transition: all .2s, box-shadow .08s ease-in;
+  transition: all 0.2s, box-shadow 0.08s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -367,11 +368,13 @@ h2 {
   background-color: #0018a8;
   border-radius: 6px;
   border-width: 0;
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    Ubuntu, sans-serif;
   font-size: 100%;
   height: 44px;
   line-height: 1.15;
@@ -382,7 +385,7 @@ h2 {
   text-align: center;
   text-transform: none;
   transform: translateZ(0);
-  transition: all .2s, box-shadow .08s ease-in;
+  transition: all 0.2s, box-shadow 0.08s ease-in;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -394,12 +397,13 @@ h2 {
 }
 
 .button-9:focus {
-  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+  box-shadow: rgba(50, 50, 93, 0.1) 0 0 0 1px inset,
+    rgba(50, 50, 93, 0.2) 0 6px 15px 0, rgba(0, 0, 0, 0.1) 0 2px 2px 0,
+    rgba(50, 151, 211, 0.3) 0 0 0 4px;
 }
 
 .btnsize {
   width: 100px;
-
 }
 
 .searchbar {
@@ -428,7 +432,7 @@ h2 {
 .cardcontent {
   justify-content: space-evenly;
   flex-direction: column;
-  background: #F1F3FF;
+  background: #f1f3ff;
   display: flex;
 }
 
@@ -448,7 +452,6 @@ h2 {
   flex-direction: column;
   justify-content: space-around;
 }
-
 
 .modal2 {
   display: flex;
@@ -540,13 +543,10 @@ div.modal {
   width: 100%;
 }
 
-
-
 /* .search-img {
   width: 30px;
   height: 30px;
 } */
-
 
 .search-field {
   width: 100%;
@@ -575,14 +575,12 @@ div.modal {
   justify-content: space-around;
 }
 
-
 .textarea {
-
   width: 406px;
   height: 54px;
   left: 497px;
   top: 214px;
-  background: #EDEFF2;
+  background: #edeff2;
   border-radius: 12px;
 }
 
@@ -591,12 +589,12 @@ div.modal {
   height: 257px;
   left: 497px;
   top: 381px;
-  background: #EDEFF2;
+  background: #edeff2;
   border-radius: 12px;
 }
 
 .posttile {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -631,7 +629,6 @@ div.modal {
   width: 100%;
   justify-content: space-evenly;
   padding-bottom: 100px;
-
 }
 
 .buttonpostpage {

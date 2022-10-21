@@ -1,29 +1,29 @@
 [
-    {
-        "id": 1,
-        "title": "It’s a marathon, not a sprint",
-        "text": "When we’re not programming, we’re running with Hope and Homes for Children Romania :) #dblife #teamhope #bex #makingworkfun",
-        "imgsrc": "https://media-exp1.licdn.com/dms/image/C4D22AQFHM9T-ph3L-g/feedshare-shrink_800/0/1665218453401?e=1669248000&v=beta&t=ecVQY6-ERwC3CYpMsYJaST5p-yrCl2y0WcXHZjr4tho",
-        "username": "DB Team",
-        "sport": "Marathon",
-        "postdate": "9/10/2022"
-    },
-    {
-        "id": 2,
-        "title": "Retragerea GOAT-ului",
-        "text": "Roger Federer s-a retras din tenis, într-o atmosferă încărcată de emoție, dar elvețianul nu va sta mult departe de tenis. FedEx a anunțat că intenționează să organizeze un turneu demonstrativ în următoarea jumătate de an, la care să participe jucători invitați de el.La conferința de presă de după ultimul meci al carierei, Federer a anunțat că are în vedere un proiect special, care ar trebui să se materializeze în următoarea jumătate de an. Văzând cât de mulți fani au fost prezenți la Londra, elvețianul se gândește serios să organizeze un turneu demonstrativ, probabil în primăvară, banii strânși urmând a fi probabil donați pentru cauze nobile.'Mi-ar plăcea să organizez un turneu demonstrativ, cu jucători pe care îi aleg eu, în următoarele 6 luni. Tenisul mi-a dat totul și nu vreau să plec de lângă el', a spus Federer, după retragere.",
-        "imgsrc": "https://media.hotnews.ro/media_server1/image-2021-05-18-24804331-41-roger-federer.jpg",
-        "username": "Alex",
-        "sport": "Tennis",
-        "postdate": "10/10/2022"
-    },
-    {
-        "id": 3,
-        "title": "S-a dat starul Campionatului Mondial de baschet U23 3X3! România este gazda competiției.",
-        "text": "Cele mai bune 40 de echipe naționale U23 de baschet 3×3 participă în perioada 5-9 octombrie la Campionatul Mondial, care este găzduit de către București. Toate meciurile se vor juca în incita Circului Metropolitan, iar printre formații se numără și reprezentativele României.Cel mai mare eveniment sportiv găzduit de către România în această toamnă, dar și primul Campionat Mondial de baschet din țară, a fost prefațat de către o conferință de presă, la care au fost invitați Carmen Tocală, președintele Federației Române de Baschet, dar și Nicușor Dan, edilul Capitalei.",
-        "imgsrc": "https://www.prosport.ro/wp-content/uploads/2022/08/baschet-mall-bucuresti4.-jpg-scaled.jpg",
-        "username": "Augustin",
-        "sport": "Basketball",
-        "postdate": "12/10/2022"
-    }
+  {
+    "id": 1,
+    "title": "It’s a marathon, not a sprint",
+    "text": "When we’re not programming, we’re running with Hope and Homes for Children Romania :) #dblife #teamhope #bex #makingworkfun",
+    "imgsrc": "https://media-exp1.licdn.com/dms/image/C4D22AQFHM9T-ph3L-g/feedshare-shrink_800/0/1665218453401?e=1669248000&v=beta&t=ecVQY6-ERwC3CYpMsYJaST5p-yrCl2y0WcXHZjr4tho",
+    "username": "DB Team",
+    "sport": "Marathon",
+    "postdate": "9/10/2022"
+  },
+  {
+    "id": 2,
+    "title": "Retragerea GOAT-ului",
+    "text": "Roger Federer s-a retras din tenis, într-o atmosferă încărcată de emoție, dar elvețianul nu va sta mult departe de tenis. FedEx a anunțat că intenționează să organizeze un turneu demonstrativ în următoarea jumătate de an, la care să participe jucători invitați de el.La conferința de presă de după ultimul meci al carierei, Federer a anunțat că are în vedere un proiect special, care ar trebui să se materializeze în următoarea jumătate de an. Văzând cât de mulți fani au fost prezenți la Londra, elvețianul se gândește serios să organizeze un turneu demonstrativ, probabil în primăvară, banii strânși urmând a fi probabil donați pentru cauze nobile.'Mi-ar plăcea să organizez un turneu demonstrativ, cu jucători pe care îi aleg eu, în următoarele 6 luni. Tenisul mi-a dat totul și nu vreau să plec de lângă el', a spus Federer, după retragere.",
+    "imgsrc": "https://media.hotnews.ro/media_server1/image-2021-05-18-24804331-41-roger-federer.jpg",
+    "username": "Alex",
+    "sport": "Tennis",
+    "postdate": "10/10/2022"
+  },
+  {
+    "id": 3,
+    "title": "S-a dat starul Campionatului Mondial de baschet U23 3X3! România este gazda competiției.",
+    "text": "Cele mai bune 40 de echipe naționale U23 de baschet 3×3 participă în perioada 5-9 octombrie la Campionatul Mondial, care este găzduit de către București. Toate meciurile se vor juca în incita Circului Metropolitan, iar printre formații se numără și reprezentativele României.Cel mai mare eveniment sportiv găzduit de către România în această toamnă, dar și primul Campionat Mondial de baschet din țară, a fost prefațat de către o conferință de presă, la care au fost invitați Carmen Tocală, președintele Federației Române de Baschet, dar și Nicușor Dan, edilul Capitalei.",
+    "imgsrc": "https://www.prosport.ro/wp-content/uploads/2022/08/baschet-mall-bucuresti4.-jpg-scaled.jpg",
+    "username": "Augustin",
+    "sport": "Basketball",
+    "postdate": "12/10/2022"
+  }
 ]

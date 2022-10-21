@@ -15,8 +15,7 @@ function ModalRegister(props) {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      await axios.get(`http://localhost:8080/users/verify/` + code, {
-      });
+      await axios.get(`http://localhost:8080/users/verify/` + code, {});
       setCode("");
     } catch (err) {
       alert("Wrong code!");
@@ -25,7 +24,7 @@ function ModalRegister(props) {
 
   const navigate = useNavigate();
   function handleClick() {
-    navigate("/")
+    navigate("/");
   }
 
   return (
@@ -38,7 +37,7 @@ function ModalRegister(props) {
       </div>
       <div className="modalButtons">
         <div className="form-group1">
-          <label className="nameInput" >Confirmation code:</label>
+          <label className="nameInput">Confirmation code:</label>
           <input
             type="text"
             placeholder="Enter the code"

@@ -8,51 +8,51 @@ import Grid from "@mui/material/Grid";
 import axios from "axios";
 import { CardHeader } from "@mui/material";
 import dataDumy from "./PostFeed.json";
-import { LoginContext } from '../Context/LoginContext';
+import { LoginContext } from "../Context/LoginContext";
 import CardActions from "@mui/material/CardActions";
 
 const Sportlist = (props) => {
-  const [data, setData] = React.useState([])
+  const [data, setData] = React.useState([]);
   const { email } = React.useContext(LoginContext);
   const getData = async () => {
     try {
-      await axios.get(`http://localhost:8080/announcements/get-all`, {
-      }).then((res) => setData(res.data))
-
+      await axios
+        .get(`http://localhost:8080/announcements/get-all`, {})
+        .then((res) => setData(res.data));
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
   React.useEffect(() => {
-    getData()
-  }, [])
-
+    getData();
+  }, []);
 
   const filteredData = dataDumy.filter((el) => {
     //if no input then return the original
-    if (props.input === '') {
+    if (props.input === "") {
       return el;
     }
     //return the item which contains the user input
     else {
-      return el.text.toLowerCase().includes(props.input)
+      return el.text.toLowerCase().includes(props.input);
     }
-  })
+  });
 
   return (
     <div className="main-list ">
       <Box sx={{ m: 5 }}>
         <Grid container spacing={3} className="justify-content-around">
-
           {data.map((item) => (
             <Grid item xs={10}>
               <div className="feed justify-content-around">
                 <Card variant="outlined">
-                  <CardHeader title={item.title} ></CardHeader>
+                  <CardHeader title={item.title}></CardHeader>
                   <CardMedia
                     component="img"
                     height="300"
-                    image={"https://www.pontul-zilei.com/wp-content/uploads/2020/01/Tot-ce-trebuie-sa-stii-despre-fotbal.jpg"}
+                    image={
+                      "https://www.pontul-zilei.com/wp-content/uploads/2020/01/Tot-ce-trebuie-sa-stii-despre-fotbal.jpg"
+                    }
                   />
                   <CardContent
                     className="cardcontent"
@@ -60,7 +60,9 @@ const Sportlist = (props) => {
                     sx={{ display: "flex" }}
                     justify-content="space-evenly"
                     flex-direction="column"
-                  >{item.description}</CardContent>
+                  >
+                    {item.description}
+                  </CardContent>
                   <CardActions>
                     <Typography color="text.secondary">
                       {item.timeOfPost.substring(0, 10)}
@@ -73,7 +75,6 @@ const Sportlist = (props) => {
               </div>
             </Grid>
           ))}
-
         </Grid>
       </Box>
       <Box sx={{ m: 5 }}>

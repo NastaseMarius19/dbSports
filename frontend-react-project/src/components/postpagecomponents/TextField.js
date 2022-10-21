@@ -1,5 +1,4 @@
-
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext } from "react";
 
 import { Textarea } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
@@ -8,24 +7,23 @@ import ReturnToMainPageButton from "../buttons/ReturnToMainPageButton";
 import DbSports from "../logos/DbSports";
 import PostChoiceButton from "../buttons/PostChoiceButton";
 import UploadPhotoButton from "../buttons/UploadPhotoButton";
-import { LoginContext } from '../Context/LoginContext';
-import axios from 'axios';
-
+import { LoginContext } from "../Context/LoginContext";
+import axios from "axios";
 
 function TextField(props) {
   const { email, name } = useContext(LoginContext);
-  const [title, setTitle] = useState('');
-  const [description, setText] = useState('');
-  const [timeOfPost, setTimeOfPost] = useState('');
-  const [sportName, setSportName] = useState('');
+  const [title, setTitle] = useState("");
+  const [description, setText] = useState("");
+  const [timeOfPost, setTimeOfPost] = useState("");
+  const [sportName, setSportName] = useState("");
   const [picture, setPhoto] = useState();
 
   function formatDate() {
     let date = new Date();
-    const day = date.toLocaleString('default', { day: '2-digit' });
-    const month = date.toLocaleString('default', { month: 'short' });
-    const year = date.toLocaleString('default', { year: 'numeric' });
-    return day + '-' + month + '-' + year;
+    const day = date.toLocaleString("default", { day: "2-digit" });
+    const month = date.toLocaleString("default", { month: "short" });
+    const year = date.toLocaleString("default", { year: "numeric" });
+    return day + "-" + month + "-" + year;
   }
 
   async function handleSubmit(event) {
@@ -37,27 +35,24 @@ function TextField(props) {
     event.preventDefault();
 
     try {
-      await axios.post("http://localhost:8080/announcements/add-announcement",
-        {
-          title: title,
-          email: email,
-          sportName: sportName,
-          timeOfPost: timeOfPost,
-          description: description,
-          picture: [],
-          nameUser: name,
-          timeOfPost: formatDate()
-        });
-    }
-    catch (err) {
+      await axios.post("http://localhost:8080/announcements/add-announcement", {
+        title: title,
+        email: email,
+        sportName: sportName,
+        timeOfPost: timeOfPost,
+        description: description,
+        picture: [],
+        nameUser: name,
+        timeOfPost: formatDate(),
+      });
+    } catch (err) {
       console.log(err);
     }
-
   }
 
   const handleClick = () => {
-    alert("Congrats you just posted!")
-  }
+    alert("Congrats you just posted!");
+  };
 
   return (
     <div>
@@ -93,21 +88,17 @@ function TextField(props) {
           />
           <div>
             <div>
-              <PostChoiceButton
-                value={sportName}
-                setSportName={setSportName}
-              />
+              <PostChoiceButton value={sportName} setSportName={setSportName} />
             </div>
             <div>
-              <UploadPhotoButton
-                value={picture}
-                setPhoto={setPhoto}
-              />
-
-
+              <UploadPhotoButton value={picture} setPhoto={setPhoto} />
 
               <div>
-                <button type="submit" onClick={handleClick} className="btn btn-post btnsize">
+                <button
+                  type="submit"
+                  onClick={handleClick}
+                  className="btn btn-post btnsize"
+                >
                   Post
                 </button>
               </div>

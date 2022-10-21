@@ -4,7 +4,6 @@ import { useState } from "react";
 import ModalRegister from "../modals/ModalRegister";
 import Backdrop from "../modals/Backdrop";
 
-
 function SubmitRegisterButton(props) {
   const [RmodalIsOpen, setRModalIsOpen] = useState(false);
 
@@ -14,7 +13,6 @@ function SubmitRegisterButton(props) {
   function registerHandler() {
     setRModalIsOpen(true);
   }
-
 
   return (
     <div>
